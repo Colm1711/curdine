@@ -55,12 +55,10 @@
     
 -   ### Site Owner
 
-9.    I want users to have positive experience when using the app.
-10.   I want users to understand and easily use the menu screen.
-11.   I want to have record of users email and password and retrieve information for validation
-12.   I want to provide user with clear message if incorrect information is entered.
-13.   I want validation on data entry points such as user email and password.
-14.   I want to be able to update the users list by remongin from registration application.
+9.    I want to be able to manage reviews
+10.   I want to be able to approve reviews
+11.   I want to be to approve orders
+12.   I want to be able to reject orders
 
 ## Scope
 
