@@ -51,7 +51,7 @@
 2.    I want to be able to leave reviews.
 3.    I want to delete my review.
 4.    I want to modify my review.
-5.    See my order history.
+5.    I want to see my order history.
     
 -   ### Site Owner
 
