@@ -1,108 +1,234 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Contents
+* [**Project Goals**](<#project-goals>)
+    *  [User Goals](#user-goals)
+    *  [Site Owner Goals](#site-owner-goals)
+* [**User Experience UX**](<#user-experience-ux>)
+    *  [User Stories](<#user-stories>)
+    *  [Scope](<#scope>)
+    *  [Design](<#design>)
+    *  [Technical Design](<#technical-design>)
+* [**Features**](<#features>)
+    * [Current Features](<#current-features>)
+    * [Future Features](<#future-features>)
+* [**Technologies Used**](<#technologies-used>)
+    * [Languages Used](<#languages-used>)
+    * [Frameworks Libraries & Programs Used](<#frameworks-libraries-programs-used>)
+    * [Libraries](<#libraries>)
+* [**Testing**](<#testing>)
+    * [Validation](<#validation>)
+    * [Testing User Stories from User Experience](<#testing-user-experienece>)
+* [**Bugs**](<#bugs>)
+* [**Deployment**](<#deployment>)
+* [**Credits**](<#credits>)
+    * [**Content**](<#content>)
+*  [**Acknowledgements**](<#acknowledgements>)
 
-Welcome USER_NAME,
+## Project Goals
+*Placeholder
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## User Experience (UX)
 
-## Gitpod Reminders
+-   ### Target Audience
+1. Users looking to retrieve order food online.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User stories
 
-`python3 -m http.server`
+-   ### User
 
-A blue button should appear to click: _Make Public_,
+1.    I want to be able to see menu and what I can order.
+2.    I want to be able to navigate site easily.
+3.    I want clear information on where the restaurant is located.
+4.    I want to be able to order food online.
+5.    I want to be able to know my order has been accepted.
+6.    I want to view reviews so that I know what others thought of previous orders.
+7.    I want to be able to cancel my order.
+8.    I want to be able to modify my order.
 
-Another blue button should appear to click: _Open Browser_.
+-   ### Registered User
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+1.    I want to be able to register my information and have it stored so I can easily order without having to fill out details.
+2.    I want to be able to leave reviews.
+3.    I want to delete my review.
+4.    I want to modify my review.
+5.    See my order history.
+    
+-   ### Site Owner
 
-A blue button should appear to click: _Make Public_,
+9.    I want users to have positive experience when using the app.
+10.   I want users to understand and easily use the menu screen.
+11.   I want to have record of users email and password and retrieve information for validation
+12.   I want to provide user with clear message if incorrect information is entered.
+13.   I want validation on data entry points such as user email and password.
+14.   I want to be able to update the users list by remongin from registration application.
 
-Another blue button should appear to click: _Open Browser_.
+## Scope
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+1. For first release, the scope is to rpovide users ability to register, login and oder food.
+2. Future scope:
 
-To log into the Heroku toolbelt CLI:
+#### Overview
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The Tweet analyzer is for the modeling of sentiment analysis to stock data.  It's purpose is to provide an easy way for investors to get real time stock assessments for trading or trading analysis to review prior to investing.  This is to help make better investment decisions and to try to see ahead of time how a stock will perform.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+## Technical Design
 
-## Release History
+* The flow for how the application operates was mapped out on lucidcharts
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<details><summary>Site Flow</summary>
+<img src="#">
+</details>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<details><summary></summary>
+<img src="#">
+</details>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<details><summary></summary>
+<img src="#">
+</details>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Data Modeling
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<details><summary></summary>
+<img src="#">
+</details>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Back to top](<#contents>)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Features
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Current Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- User can login with their email and password.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- User can reigster their details, again this is checked at time of registration to avoid unnecessary follow up of details.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
+### Future Features
 
-**Why have you added this script?**
+- Admin can reject orders.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[Back to top](<#contents>)
 
-**How will this affect me?**
+## Technologies Used
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Languages Used
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+-   [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Frameworks Libraries & Programs Used
+1. [Git](https://git-scm.com/) - Git was used for version control.
+2. [GitHub](https://github.com/) - Github was used as a remote repository to store project code.
+3. [Gitpod](https://gitpod.io/) - Gitpod was the IDE user to write the code of the project code.
+4. [Lucidcharts](https://www.lucidchart.com/) - Lucidcharts was used to map out the flowcharts for the project.
+5. [Googlesheets](https://www.google.com/sheets/about/) -  Googlesheets was used to act as the backend database to store snesitive information to be queried.
+6. [Google Cloud Platform](https://cloud.google.com/) - Google cloud is iused to manage the access to the google services, google authorization, google sheets.
+7. [Twitter](https://developer.twitter.com/en) -  Twitter developer was used to access the Twitter API. With use of OAUthandler to access live tweets from timeline.
+8. [Yahoo finance](https://finance.yahoo.com/) -  Yahoo finance was used to access the Yahoo Stock API, this gives appliction access to live data.
 
-**So….?**
+#### Libraries
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+1. os -  for environs.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+##### 3rd Party Libraries
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+[Back to top](<#contents>)
 
----
+## Testing
 
-Happy coding!
+### Validation
+
+### PEP8:
+
+<details><summary>Placeholder for code</summary>
+<img src="#">
+</details>
+
+
+
+### Testing User Stories from User Experience (UX) Section
+
+### Testing User Experienece
+1. As a user I want a clear menu with options that are clear on intention.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Find main menu       |      No action needed      | User is presented with welcome page | `Works as expected` |
+
+<details><summary>Screenshots</summary>
+<img src="assets/images/main-menu.png">
+</details>
+
+                                         
+                                       
+## Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+
+[Back to top](<#contents>)
+
+## Deployment
+
+This application has been deployed from Github using Heroku. Here's how:
+
+1. Create an account at heroku.com
+2. Create a new app, add app name and your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars, add your sensitive data (creds.json for example)
+6. For this project, I set buildpacks to and in that order.
+7. Go to "Deploy" and at "Deployment method", click on "Connect to Github"
+8. Enter your repository name and click on it when it shows below
+9. Choose the branch you want to buid your app from
+10. If desired, click on "Enable Automatic Deploys", which keeps the app up to date with your Github repository
+
+### Forking the GitHub Repository 
+
+By forking this GitHub repository you are making a copy of the original to view or make changes without affecting the original. You can do this by following these steps...
+
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS3_MitsurukiFMS).
+2. Click 'Fork' (last button on the top right of the repository page).
+3. You will then have a copy of the repository in your own GitHub account. 
+
+### Making a Local Clone
+
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS3_MitsurukiFMS).
+2. Click on the 'Code' button (next to 'Add file'). 
+3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+4. Then open Git Bash.
+5. Change the current working directory to where you want the cloned directory to be made.
+6. In your IDE's terminal type 'git clone' followed by the URL you copied.
+7. Press Enter. 
+8. Your local clone will now be made.
+
+## Constraints
+
+The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+
+[Back to top](<#contents>)
+
+## Credits
+
+### Code
+
+### Content
+
+-   All content was written by the developer.
+
+### Acknowledgements
+
+The app was completed as a Portfolio 4 Project for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor Mo Shami, my class mates, the Slack community, and all at the Code Institute for their help and support. 
+
+Also to my friends and family who helped test site & provide feedback and most importantly patient with me during this time!
+
+[Back to top](<#contents>)
