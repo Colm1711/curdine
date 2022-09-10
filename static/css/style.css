@@ -1,0 +1,9 @@
+#navbar, footer{
+    background-color: #aad4b3;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
