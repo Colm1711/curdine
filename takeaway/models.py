@@ -32,10 +32,3 @@ class Order(models.Model):
     def __str__(self):
         return f'Order: {self.creation_date.strftime("%m%d%Y, %H:%M:%S")}'
 
-
-# class User:
-#     pass
-
-
-# class Profile:
-#     pass
