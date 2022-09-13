@@ -9,6 +9,7 @@ class Profile(models.Model):
     This is the Profile model that extends the User Profile.
     '''
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    email = models.EmailField()
     name = models.CharField(max_length=50, blank=True)
     phone_number = models.CharField(max_length=10, blank=True)
     address1 = models.CharField(max_length=50, blank=True)
