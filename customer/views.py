@@ -21,7 +21,9 @@ def update_user_data(user):
 def custForm(request):
     """
     This function handles the saving of data to the database and the view
-    presented to the user
+    presented to the user.
+
+    If user fills in details they will be signed in and redirect to the home page
     """
     if request.method == 'POST':
         form = CustForm(request.POST)
