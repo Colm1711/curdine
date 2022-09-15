@@ -18,12 +18,10 @@
     <nav id="navbar" class="navbar navbar-expand-lg py-3 fixed-top">
         <div class="container">
             <a href="#" class="navbar-brand text-white">Curdine</a>
-
-            <button class="navbar-toggler collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navmenu">
+            <div class="collapse navbar-collapse"  id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
                         <a href="{% url 'index' %}" class="nav-link">Home</a>
@@ -37,9 +35,22 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Sign Up/Login</a>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ user.profile.name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Update Profile</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+                        </div>
                     </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="nav-link">Sign Up/Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -51,7 +62,6 @@
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
-    
     <!--Contact and Map-->
     <div class="container mt-5">
         <div class="row g-4">
