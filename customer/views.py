@@ -59,9 +59,8 @@ def cust_form(request):
 
 
 def logout(request):
-        """
+    """
     This function handles user log out and redirects to the home page
     """
-    print('logged out')
     auth_logout(request)
     return HttpResponseRedirect('/')
