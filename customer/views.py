@@ -18,7 +18,7 @@ def update_user_data(user):
         'county': user.profile.county,
         'eir_code': user.profile.eir_code, })
 
-def custForm(request):
+def cust_form(request):
     """
     This function handles the saving of data to the database and the view
     presented to the user.
