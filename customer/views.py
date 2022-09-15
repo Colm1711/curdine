@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.contrib.auth import authenticate, login, logout as auth_logout
 from .forms import CustForm
 from .models import Profile
 
@@ -17,6 +17,7 @@ def update_user_data(user):
         'city': user.profile.city,
         'county': user.profile.county,
         'eir_code': user.profile.eir_code, })
+
 
 def cust_form(request):
     """
@@ -55,3 +56,12 @@ def cust_form(request):
         form = CustForm()
 
     return render(request, 'signupform.html', {'form': form})
+
+
+def logout(request):
+        """
+    This function handles user log out and redirects to the home page
+    """
+    print('logged out')
+    auth_logout(request)
+    return HttpResponseRedirect('/')
