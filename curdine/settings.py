@@ -137,6 +137,9 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Redirect for user login
+LOGIN_REDIRECT_URL = 'index'
+
 # Crispy form imports for bootstrap
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
