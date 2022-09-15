@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<!--SignUp form-->
+<div class="container p-5">
+    <h1 class="text-center display-3 pb-2">Sign Up & Register Today!</h1>
+    <h3 class="text-center text-muted pb-3">Fill out the form below</h2>
+    {% load crispy_forms_tags %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            {% for field in form %}
+            <div class="col-lg-6 col-md-12">
+              {{field|as_crispy_field}}
+            </div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-success">Sign up</button>
+      </form>
+</div>
+{% endblock %}
