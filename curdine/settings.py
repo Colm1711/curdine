@@ -142,5 +142,8 @@ LOGIN_REDIRECT_URL = 'index'
 
 # Crispy form imports for bootstrap
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
