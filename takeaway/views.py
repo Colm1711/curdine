@@ -3,26 +3,34 @@ from django.views.generic import TemplateView
 from django.views import generic, View
 from .models import Food_item, Order
 
+
 class Home(TemplateView):
     '''This allows the home page to be rendered to user'''
     template_name = 'index.html'
+
 
 class About(TemplateView):
     '''This allows the about page to be rendered to user'''
     template_name = 'about.html'
 
+
 class Food_item_List(generic.ListView):
-    '''This allows the Menu page and items to be rendered to user'''
+    '''
+    This allows the Menu page and items to be rendered to user
+    '''
     model = Food_item
     queryset = Food_item.objects.filter().order_by('-food_name')
     template_name = 'menu.html'
     paginate_by = 6
 
+
 class Order_form(View):
-    '''This allows the Order page and access to Menu items to be rendered to user
-       and user to select items to order.
+    '''
+        This allows the Order page and access to Menu items to be rendered 
+        to user and user to select items to order.
        
-       Redirects user to confirmation page with order details and total cost price.
+        Redirects user to confirmation page with order details and total 
+        cost price.
 
        '''
     # getting menu items to render to the user
@@ -50,14 +58,16 @@ class Order_form(View):
                 'name': food_item.food_name,
                 'price': food_item.price
             }
-            # appending the item to the order_items list inside the order_items dictionary
+            # appending the item to the order_items list inside the
+            # order_items dictionary
             order_items['items'].append(item_data)
 
             # setting price and item_ids list
             price = 0
             item_ids = []
 
-        # looping through selected items to get price and items to overall order
+        # looping through selected items to get price and items to 
+        # overall order
         for item in order_items['items']:
             price += item['price']
             item_ids.append(item['id'])
