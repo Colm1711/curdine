@@ -32,8 +32,12 @@ class OrderAdmin(SummernoteModelAdmin):
     List how the content is presented to Amdmin User and provides list filter 
     panel.
 
-    Provides search fields: 'creation_date', 'price'
+    Provides search fields: 'creation_date', 'name', 'address1','email','ordered_items','price'
     '''
-    list_display = ('creation_date', 'price')
-    search_fields = ['creation_date', 'price']
-    list_filter = ('creation_date', 'price')
+    list_display = ('creation_date', 'name', 'address1','email','ordered_items','price')
+    search_fields = ['creation_date', 'name', 'address1','email','ordered_items','price']
+    list_filter = ('creation_date', 'name', 'address1','email','price')
+
+    # get the food items from list
+    def ordered_items(self, obj):
+        return ", ".join([i.food_name for i in obj.items.all()])
