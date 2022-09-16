@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views import generic, View
+from django.core.mail import send_mail
 from .models import Food_item, Order
 
 
@@ -96,6 +97,25 @@ class Order_form(View):
             )
         # adding the item_ids list to the item_ids list.
         order.items.add(*item_ids)
+        
+        # send confirmation email
+        # unpack the order items to add to list
+        ordered_item = []
+        for i in order_items['items']:
+            ordered_item.append(i['name'])
+
+        # email body
+        body = ('Your order is being processed and with the kitchen crew!\n'
+                f'Your order: {ordered_item}\n'
+                f'Your total price to pay: €{price}')
+        
+        # email details
+        send_mail(
+            'Thank you for your order!',
+            body,
+            'example@example.com',
+            [email]
+        )
 
         context = {
             'items': order_items['items'],
