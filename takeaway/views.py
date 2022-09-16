@@ -7,6 +7,10 @@ class Home(TemplateView):
     '''This allows the home page to be rendered to user'''
     template_name = 'index.html'
 
+class About(TemplateView):
+    '''This allows the about page to be rendered to user'''
+    template_name = 'about.html'
+
 class Food_item_List(generic.ListView):
     '''This allows the Menu page and items to be rendered to user'''
     model = Food_item
