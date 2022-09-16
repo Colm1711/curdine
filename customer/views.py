@@ -68,7 +68,7 @@ def logout(request):
 
 def update_profile(request):
     """
-    Thgis function handles rendering of the update page to the user
+    This function handles rendering of the update page to the user
     """
     if request.method == 'POST':
         # passing in instance so form doesn't render empty
@@ -82,10 +82,10 @@ def update_profile(request):
     else:
         user_form = CustUpdateForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.profile)
-    
-    context = {
-        'user_form': user_form,
-        'profile_form': profile_form,
-    }
+        
+        context = {
+                    'user_form': user_form,
+                    'profile_form': profile_form,
+                    }
 
     return render(request, 'profile_update.html', context)
