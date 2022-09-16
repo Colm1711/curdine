@@ -5,7 +5,7 @@
 <div class="container p-5">
     <h1 class="text-center display-3 pb-2 pt-3">Update Profile Details</h1>
     {% load crispy_forms_tags %}
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row">
             <div class="col-lg-6 col-md-12">
