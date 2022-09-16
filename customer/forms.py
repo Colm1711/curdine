@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
+from .models import Profile
 
 
 class CustForm(UserCreationForm, forms.Form):
@@ -18,9 +19,6 @@ class CustForm(UserCreationForm, forms.Form):
     eir_code = forms.CharField(max_length=7)
 
     class Meta:
-        """
-        Meta class of Model, fields and labels to present to user
-        """
         model = User
         fields = ('username', 'password1', 'password2',)
         labels = {'email': 'email',
@@ -31,3 +29,22 @@ class CustForm(UserCreationForm, forms.Form):
                   'city': 'city',
                   'county': 'county',
                   'eir_code': 'eir_code', }
+
+
+class CustUpdateForm(forms.ModelForm):
+    """
+    Class controls form for updating User details to User Model
+    """
+    class Meta:
+        model = User
+        fields = ['username']
+
+
+class ProfileUpdateForm(forms.ModelForm):
+    """
+    Class controls form for updating User details to User Profile Model
+    """
+    class Meta:
+        model = Profile
+        fields = ['email', 'name', 'phone_number', 'address1', 'address2',
+                  'city', 'county', 'eir_code']
