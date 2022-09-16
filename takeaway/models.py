@@ -19,6 +19,7 @@ class Food_item(models.Model):
     def __str__(self):
         return self.food_name
 
+
 class Order(models.Model):
     '''
     This is the order model for the user to
