@@ -18,10 +18,13 @@
         <div class="col-md-5 col-sm-12 text-center">
             <h3 class="pb-3">Order Summary:</h3>
             {% for item in items %}
-                <p>{{ item.name }} <span class="pl-3">{{ item.price }}</span></p>
+            <p>{{ item.name }} <span class="pl-3">{{ item.price }}</span></p>
             {% endfor %}
-
-            <p class="font-weight-bold pt-4">Total: {{ price }}</p>
+            <h3 class="pb-3">Customer Details:</h3>
+            {% for detail in user %}
+            <p class="fst-italic">{{detail}}</p>
+            {% endfor %}
+            <p class="fw-bold pt-4">Total Due: {{ price }}</p>
         </div>
     </div>
 </div>
