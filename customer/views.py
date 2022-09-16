@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout as auth_logout
-from .forms import CustForm
+from .forms import CustForm, CustUpdateForm, ProfileUpdateForm
 from .models import Profile
 
 
@@ -64,3 +64,28 @@ def logout(request):
     """
     auth_logout(request)
     return HttpResponseRedirect('/')
+
+
+def update_profile(request):
+    """
+    Thgis function handles rendering of the update page to the user
+    """
+    if request.method == 'POST':
+        # passing in instance so form doesn't render empty
+        user_form = CustUpdateForm(request.POST, instance=request.user)
+        profile_form = ProfileUpdateForm(request.POST,
+                                         instance=request.user.profile)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            return redirect('update_profile')
+    else:
+        user_form = CustUpdateForm(instance=request.user)
+        profile_form = ProfileUpdateForm(instance=request.user.profile)
+    
+    context = {
+        'user_form': user_form,
+        'profile_form': profile_form,
+    }
+
+    return render(request, 'profile_update.html', context)
