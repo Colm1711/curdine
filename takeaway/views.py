@@ -43,6 +43,16 @@ class Order_form(View):
         return render(request, 'order.html', context)
 
     def post(self, request, *args, **kwargs):
+
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone_number = request.POST.get('phone_number')
+        address1 = request.POST.get('address1')
+        address2 = request.POST.get('address2')
+        city = request.POST.get('city')
+        county = request.POST.get('county')
+        eir_code = request.POST.get('eir_code')
+
         # creating order item dictionary with items list
         order_items = {
             'items': []
@@ -66,20 +76,40 @@ class Order_form(View):
             price = 0
             item_ids = []
 
-        # looping through selected items to get price and items to 
+        # looping through selected items to get price and items to
         # overall order
         for item in order_items['items']:
             price += item['price']
             item_ids.append(item['id'])
 
         # creating the order object    
-        order = Order.objects.create(price=price)
+        order = Order.objects.create(
+            price=price,
+            name=name,
+            email=email,
+            phone_number=phone_number,
+            address1=address1,
+            address2=address2,
+            county=county,
+            city=city,
+            eir_code=eir_code,
+            )
         # adding the item_ids list to the item_ids list.
         order.items.add(*item_ids)
 
         context = {
             'items': order_items['items'],
-            'price': price
+            'price': price,
+            'user': [
+                name,
+                email,
+                phone_number,
+                address1,
+                address2,
+                county,
+                city,
+                eir_code,
+            ]
         }
 
         return render(request, 'order_confirmation.html', context)
