@@ -8,8 +8,6 @@ class CustForm(UserCreationForm, forms.Form):
     Class is the form that is presented to the user to sign up.
 
     """
-
-
     email = forms.EmailField()
     name = forms.CharField(max_length=50)
     phone_number = forms.CharField(max_length=10)
@@ -20,6 +18,9 @@ class CustForm(UserCreationForm, forms.Form):
     eir_code = forms.CharField(max_length=7)
 
     class Meta:
+        """
+        Meta class of Model, fields and labels to present to user
+        """
         model = User
         fields = ('username', 'password1', 'password2',)
         labels = {'email': 'email',
