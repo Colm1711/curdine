@@ -10,11 +10,10 @@ class Home(TemplateView):
     template_name = 'index.html'
 
 
-class About(TemplateView):
+class About(generic.ListView):
     '''This allows the about page to be rendered to user'''
     model = AboutMe
     template_name = 'about.html'
-    pk = 1
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
