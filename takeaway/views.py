@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views import generic, View
 from django.core.mail import send_mail
-from .models import Food_item, Order
+from .models import Food_item, Order, AboutMe
 
 
 class Home(TemplateView):
@@ -12,7 +12,14 @@ class Home(TemplateView):
 
 class About(TemplateView):
     '''This allows the about page to be rendered to user'''
+    model = AboutMe
     template_name = 'about.html'
+    pk = 1
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['about_text_body'] = AboutMe.objects.values_list('about_text_body', flat=True)
+        return context
 
 
 class Food_item_List(generic.ListView):
