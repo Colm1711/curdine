@@ -47,6 +47,10 @@ class Order(models.Model):
 
 
 class AboutMe(models.Model):
+    """
+    This is the About me model for the site owner to
+    be able to update about me section of website with text and images.
+    """
     about_text_body = models.TextField()
     about_photos = models.ManyToManyField('AboutPhotos', blank=True)
     date_modified = models.DateTimeField(auto_now=True)
@@ -56,4 +60,7 @@ class AboutMe(models.Model):
 
 
 class AboutPhotos(models.Model):
+    """
+    This model holds the photos for the About me model.
+    """
     photo = CloudinaryField('image', default='placeholder')
