@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Food_item, Order, AboutMe, AboutPhotos
+from .models import Food_item, Order, AboutMe
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -50,5 +50,3 @@ class OrderAdmin(admin.ModelAdmin):
 class AboutMeAdmin(SummernoteModelAdmin):
     date_hierarchy = ('date_modified')
     summernote_fields = ('about_text_body')
-
-admin.site.register(AboutPhotos)
