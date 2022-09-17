@@ -18,7 +18,8 @@ class About(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['about_text_body'] = AboutMe.objects.values_list('about_text_body', flat=True)
+        context['about_text_body'] = AboutMe.objects.values_list(
+            'about_text_body', flat=True)
         return context
 
 
