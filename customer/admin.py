@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Profile
 
 # registering Profile Table to admin
+
+
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
     '''
