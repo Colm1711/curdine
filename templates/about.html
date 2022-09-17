@@ -4,5 +4,12 @@
 {% block content %}
 <div class="container p-5">
     <h1>About Us</h1>
+    <div class="container">
+        <p class="lead">
+            {% for desc in about_text_body %}
+            {{desc | safe}}
+            {% endfor %}
+        </p>
+    </div>
 </div>
 {% endblock %}
