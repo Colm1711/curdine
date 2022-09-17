@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Food_item, Order
+from .models import Food_item, Order, AboutMe, AboutPhotos
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -24,7 +24,7 @@ class Food_itemAdmin(SummernoteModelAdmin):
 
 
 @admin.register(Order)
-class OrderAdmin(SummernoteModelAdmin):
+class OrderAdmin(admin.ModelAdmin):
     '''
     This is the class that controls the Admins view of the
     Orders.
@@ -44,3 +44,11 @@ class OrderAdmin(SummernoteModelAdmin):
     def ordered_items(self, obj):
         """get the food items from list"""
         return ", ".join([i.food_name for i in obj.items.all()])
+
+
+@admin.register(AboutMe)
+class AboutMeAdmin(SummernoteModelAdmin):
+    date_hierarchy = ('date_modified')
+    summernote_fields = ('about_text_body')
+
+admin.site.register(AboutPhotos)
