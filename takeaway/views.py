@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
 from django.views import generic, View
 from django.core.mail import send_mail
@@ -30,6 +30,21 @@ class Food_item_List(generic.ListView):
     queryset = Food_item.objects.filter().order_by('-food_name')
     template_name = 'menu.html'
     paginate_by = 6
+
+
+class Food_Item_View(View):
+    '''
+    This allows user to navigate to food item to leave review.
+    '''
+    def get(self, request, slug, *args, **kwargs):
+        item = get_object_or_404(Food_item, slug=slug)
+        reviews = item.reviews.filter(approved=True).order_by('creation_date')
+        context = {   
+                    'item': item,
+                    'reviews': reviews,
+                    }
+
+        return render(request, 'food_item.html', context)
 
 
 class Order_form(View):
