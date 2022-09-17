@@ -52,15 +52,7 @@ class AboutMe(models.Model):
     be able to update about me section of website with text and images.
     """
     about_text_body = models.TextField()
-    about_photos = models.ManyToManyField('AboutPhotos', blank=True)
     date_modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f'{self.date_modified.strftime("%m/%d/%Y, %H:%M:%S")}'
-
-
-class AboutPhotos(models.Model):
-    """
-    This model holds the photos for the About me model.
-    """
-    photo = CloudinaryField('image', default='placeholder')
