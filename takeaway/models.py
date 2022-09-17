@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from customer.models import User
 
 
 class Food_item(models.Model):
@@ -18,6 +19,26 @@ class Food_item(models.Model):
     
     def __str__(self):
         return self.food_name
+
+
+class Review(models.Model):
+    """
+    This is the review model for food items for user to leave a review
+    on a food item to let restraunt and others know thoughts on food item.
+    """
+    food_item = models.ForeignKey(Food_item, on_delete=models.CASCADE,
+                                  related_name="reviews")
+    username = models.ForeignKey(User, on_delete=models.CASCADE,
+                                 related_name='usernames')
+    body = models.TextField()
+    creation_date = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField()
+
+    class Meta:
+        ordering = ["-creation_date"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.username}"
 
 
 class Order(models.Model):
