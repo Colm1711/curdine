@@ -3,7 +3,7 @@
 <!--Order page content-->
 {% block content %}
 <div class="p-5 container">
-    <h1>Order Now</h1>
+    <h1 clas="mb-3">Order Now</h1>
     <form method="POST">
         {% csrf_token %}
         <div class="row row-cols-1 row-cols-md-3">
@@ -12,12 +12,12 @@
                 <div class="card m-4">
                     {% if "placeholder" in item.food_image.url %}
                     <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top rounded">
+                        class="card-img-top">
                     {% else %}
-                    <img src="{{item.featured_image.url}}" alt="Image of the food item" class="card-image-top rounded">
+                    <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top">
                     {% endif %}
                     <div class="card-body">
-                        <h5 class="card-title">{{ item }}</h5>
+                        <h2 class="card-title">{{ item }}</h2>
                         <p class="card-text">{{item.description}}</p>
                         <p class="card-text">&euro;{{ item.price }}</p>
                         <div class="form-group form-check">
