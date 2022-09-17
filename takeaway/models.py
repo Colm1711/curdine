@@ -44,3 +44,16 @@ class Order(models.Model):
 
     def __str__(self):
         return f'Order: {self.creation_date.strftime("%m%d%Y, %H:%M:%S")}'
+
+
+class AboutMe(models.Model):
+    about_text_body = models.TextField()
+    about_photos = models.ManyToManyField('AboutPhotos', blank=True)
+    date_modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.date_modified.strftime("%m/%d/%Y, %H:%M:%S")}'
+
+
+class AboutPhotos(models.Model):
+    photo = CloudinaryField('image', default='placeholder')
