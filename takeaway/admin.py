@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Food_item, Order, AboutMe
+from .models import Food_item, Order, AboutMe, Review
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -21,6 +21,17 @@ class Food_itemAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('food_name',)}
     list_filter = ('food_name', 'price')
     summernote_fields = ('description')
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('username', 'body', 'food_item', 'creation_date',
+                    'approved')
+    list_filter = ('approved', 'creation_date')
+    search_fields = ('username', 'email', 'body')
+    actions = ['approve_reviews']
+
+    def approve_reviews(self, request, queryset):
+        queryset.update(approved=True)
 
 
 @admin.register(Order)
