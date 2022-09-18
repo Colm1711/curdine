@@ -24,10 +24,10 @@ class Food_itemAdmin(SummernoteModelAdmin):
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('username', 'body', 'food_item', 'creation_date',
+    list_display = ('name', 'body', 'food_item', 'creation_date',
                     'approved')
     list_filter = ('approved', 'creation_date')
-    search_fields = ('username', 'email', 'body')
+    search_fields = ('name', 'email', 'body')
     actions = ['approve_reviews']
 
     def approve_reviews(self, request, queryset):
