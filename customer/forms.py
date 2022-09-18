@@ -37,7 +37,7 @@ class CustUpdateForm(forms.ModelForm):
     """
     class Meta:
         model = User
-        fields = ['username']
+        fields = ('username',)
 
 
 class ProfileUpdateForm(forms.ModelForm):
@@ -46,5 +46,5 @@ class ProfileUpdateForm(forms.ModelForm):
     """
     class Meta:
         model = Profile
-        fields = ['email', 'name', 'phone_number', 'address1', 'address2',
-                  'city', 'county', 'eir_code']
+        fields = ('email', 'name', 'phone_number', 'address1', 'address2',
+                  'city', 'county', 'eir_code',)
