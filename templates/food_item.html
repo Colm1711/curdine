@@ -4,73 +4,75 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <div class="container py-4">
-    <div class="p-5 mt-4 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <!--Food Item Name-->
-        <h1 class="display-5 fw-bold">{{ item }}</h1>
-        <!--Food Item Picture-->
-        {% if "placeholder" in food_item.food_image.url %}
-        <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Image of the food item" class="card-img-top">
-        {% else %}
-        <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top img-fluid">
-        {% endif %}
+  <div class="p-5 mt-4 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <!--Food Item Name-->
+      <h1 class="display-5 fw-bold">{{ item }}</h1>
+      <!--Food Item Picture-->
+      {% if "placeholder" in food_item.food_image.url %}
+      <img
+        src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Image of the food item" class="card-img-top">
+      {% else %}
+      <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top img-fluid">
+      {% endif %}
+    </div>
+  </div>
+  <!--Food Item Description-->
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6 mb-3">
+      <div class="h-100 p-5 bg-light rounded-3">
+        <p class="lead">{{ item.description }}</p>
       </div>
     </div>
-    <!--Food Item Description-->
-    <div class="row align-items-md-stretch">
-      <div class="col-md-6 mb-3">
-        <div class="h-100 p-5 bg-light rounded-3">
-            <p class="lead">{{ item.description }}</p>
+    <!--Food Item Reviews-->
+    <div class="col-md-6 mb-3">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2>Reviews</h2>
+        <div class="card-body">
+          <!-- We want a for loop inside the empty control tags to iterate through each review in reviews -->
+          {% for review in reviews %}
+          <div style="padding: 10px;">
+            <p class="font-weight-bold">
+              <!-- The reviewer's name goes here. Check the model if you're not sure what that is -->
+              {{ review.name }}
+              <span class=" text-muted font-weight-normal">
+                <!-- The review's created date goes here -->
+                {{ review.created_on }}
+              </span> wrote:
+            </p>
+            <!-- The body of the review goes before the | -->
+            {{ review.body | linebreaks }}
+          </div>
+          <!-- Our for loop ends here -->
+          {% endfor %}
         </div>
       </div>
-      <!--Food Item Reviews-->
-      <div class="col-md-6 mb-3">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Reviews</h2>
-          <div class="card-body">
-            <!-- We want a for loop inside the empty control tags to iterate through each review in reviews -->
-            {% for review in reviews %}
-            <div style="padding: 10px;">
-                <p class="font-weight-bold">
-                    <!-- The reviewer's name goes here. Check the model if you're not sure what that is -->
-                    {{ review.name }}
-                    <span class=" text-muted font-weight-normal">
-                        <!-- The review's created date goes here -->
-                        {{ review.created_on }}
-                    </span> wrote:
-                </p>
-                <!-- The body of the review goes before the | -->
-                {{ review.body | linebreaks }}
-            </div>
-            <!-- Our for loop ends here -->
-            {% endfor %}
-        </div>
-        </div>
-      </div>
-      <!--Post Food Item Review-->
-      <div class="col-md-12 mb-3">
-        <div class="h-100 p-5 bg-light rounded-3">
+    </div>
+    <!--Post Food Item Review-->
+
+    <div class="col-md-12 mb-3">
+      <div class="h-100 p-5 bg-light rounded-3">
+        {% if reviewed %}
+        <div class="card-body">
+          <div class="alert alert-success" role="alert">
+            Your review is awaiting approval
+          </div>
+          {% else %}
+          {% if user.is_authenticated %}
           <h2>Why don't you tell us what you thought?</h2>
-          <div class="card-body">
-            {% if review %}
-            <div class="alert alert-success" role="alert">
-                Your review is awaiting approval
-            </div>
-            {% else %}
-            {% if user.is_authenticated %}
-                        <h3>Leave a review:</h3>
-            <p>Posting as: {{ user.profile.name }}</p>
-            <form method="post" style="margin-top: 1.3em;">
-                {{ review_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% endif %}
-            {% endif %}
-        </div>
+          <h3>Leave a review:</h3>
+          <p>Posting as: {{ user.profile.name }}</p>
+          <form method="POST">
+            {{ review_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+          </form>
+          {% endif %}
+          {% endif %}
         </div>
       </div>
     </div>
   </div>
+</div>
 {% endblock %}
