@@ -24,6 +24,15 @@ class Food_itemAdmin(SummernoteModelAdmin):
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
+    """
+    This is the class that controls the Admins view of the
+    reviews.
+
+    List how the content is presented to Amdmin User and provides list filter 
+    panel.
+
+    Provides search fields: 'name', 'email', 'body'
+    """
     list_display = ('name', 'body', 'food_item', 'creation_date',
                     'approved')
     list_filter = ('approved', 'creation_date')
