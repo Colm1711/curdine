@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.views import generic, View
 from django.core.mail import send_mail
 from .models import Food_item, Order, AboutMe
+from .forms import ReviewForm
 
 
 class Home(TemplateView):
@@ -37,15 +38,40 @@ class Food_Item_View(View):
     This allows user to navigate to food item to leave review.
     '''
     def get(self, request, slug, *args, **kwargs):
-        queryset = Food_item.objects.filter().order_by('-food_name')
-        item = get_object_or_404(queryset, slug=slug)
+        item = get_object_or_404(Food_item, slug=slug)
         reviews = item.reviews.filter(approved=True).order_by('-creation_date')
         context = {   
                     'item': item,
                     'reviews': reviews,
+                    'reviewed': False,
+                    'review_form': ReviewForm(),
                     }
 
         return render(request, 'food_item.html', context)
+
+    def post(self, request, slug, *args, **kwargs):
+        item = get_object_or_404(Food_item, slug=slug)
+        reviews = item.reviews.filter(approved=True).order_by('-creation_date')
+
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            review_form.food_item_id = item
+            review_form.instance.email = request.user.profile.email
+            review_form.instance.name = request.user.username
+            review = review_form.save(commit=False)
+            review.food_item = item
+            review.save()
+        else:
+            review_form = ReviewForm()
+
+        context = {
+                'item': item,
+                'reviews': reviews,
+                'reviewed': True,
+                'review_form': review_form,
+            }
+
+        return render(request, "food_item.html", context,)
 
 
 class Order_form(View):
