@@ -37,8 +37,9 @@ class Food_Item_View(View):
     This allows user to navigate to food item to leave review.
     '''
     def get(self, request, slug, *args, **kwargs):
-        item = get_object_or_404(Food_item, slug=slug)
-        reviews = item.reviews.filter(approved=True).order_by('creation_date')
+        queryset = Food_item.objects.filter().order_by('-food_name')
+        item = get_object_or_404(queryset, slug=slug)
+        reviews = item.reviews.filter(approved=True).order_by('-creation_date')
         context = {   
                     'item': item,
                     'reviews': reviews,
