@@ -14,26 +14,44 @@
             </div>
         </div>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Update
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#updateModal">
+            Update profile
         </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete My Account</button>  
+        <!-- Update Modal -->
+        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Submit My Order</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Update My Profile</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back to
                             Updating Profile</button>
-                            <button type="submit" class="btn btn-success">Apply Update!</button>
+                        <button type="submit" class="btn btn-success">Apply Update!</button>
                     </div>
                 </div>
             </div>
         </div>
+    <!-- Delete Account Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Are you sure? This cannot be reversed</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No I want to go back to
+                        site</button>
+                    <button type="submit" class="btn btn-danger"><a class="dropdown-item" href="{% url 'delete' %}">Delete Profile</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    </div>
     </form>
 </div>
 {% endblock %}
