@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout as auth_logout
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.http import HttpResponse
 from .forms import CustForm, CustUpdateForm, ProfileUpdateForm
 from .models import Profile
 
@@ -66,9 +69,13 @@ def logout(request):
     return HttpResponseRedirect('/')
 
 
+@login_required
 def update_profile(request):
     """
     This function handles rendering of the update page to the user
+    and logic to update.
+
+    User must be signed in to do this.
     """
     if request.method == 'POST':
         # passing in instance so form doesn't render empty
@@ -89,3 +96,13 @@ def update_profile(request):
                     }
 
     return render(request, 'profile_update.html', context)
+
+@login_required
+def delete_user(request):
+    """
+    This function handles user account deletion on the user update page
+    and redirects to the home page
+    """
+    user = User.objects.filter(id=request.user.id)
+    user.delete()
+    return HttpResponseRedirect('/')
