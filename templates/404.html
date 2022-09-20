@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!--404 error page-->
+<div class="container about-page">
+
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>404 (page not found)</h3>
+            <p class="lead">Ooops something went wrong.
+                Please click on the link below to go back to the homepage
+                <a class="navbar-brand" href="{% url 'index' %}"><span class="brand">Link</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+{%endblock%}
