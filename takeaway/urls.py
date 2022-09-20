@@ -9,4 +9,5 @@ urlpatterns = [
     path('<slug:slug>/', views.Food_Item_View.as_view(), name='food_item'),
     path('delete/<int:pk>/', views.ReviewDeleteView.as_view(),
          name='review_confirm_delete'),
-]
+    path('update/<int:pk>/', views.ReviewUpdateView.as_view(), name="update_review"),
+    ]
