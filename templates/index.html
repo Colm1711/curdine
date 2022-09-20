@@ -2,7 +2,8 @@
 
 <!--landing page content-->
 {% block content %}
-<div class="container p-5">
-    <h1>Home</h1>
+{% load static %}
+<div class="container my-5">
+        <img class="img-fluid" src="{% static '/images/hero-image.jpg' %}" alt="Image of poutine with Canadian flag">
 </div>
 {% endblock %}
