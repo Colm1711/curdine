@@ -7,3 +7,7 @@
     height: 100%;
     border-radius: 10px;
 }
+
+.bi-trash-fill{
+    color: red;
+}
