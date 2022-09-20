@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-<!--landing page content-->
+<!--about page content-->
 {% block content %}
 <div class="container p-5">
     <h1>About Us</h1>
@@ -8,10 +8,10 @@
         <p class="lead pb-5">
             {% for desc in about_text_body %}
             {{desc | safe}}
-            {% endfor %}
-            <div class="pb-2">
-                <!--placeholder for sign up-->
-            </div>
-        </p>
+            {% endfor %} </p>
+        <div class="pb-2 text-center">
+            <p class="lead">Don't have an account? <a href="{% url 'signupform' %}">Signup here</a></p>
+        </div>
     </div>
-{% endblock %}
+</div>
+    {% endblock %}

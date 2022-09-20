@@ -3,7 +3,7 @@
 <!--Order page content-->
 {% block content %}
 <div class="p-5 container">
-    <h1 clas="mb-3">Order Now</h1>
+    <h1 class="mb-3">Order Now</h1>
     <form method="POST">
         {% csrf_token %}
         <div class="row row-cols-1 row-cols-md-3">
@@ -12,7 +12,7 @@
                 <div class="card m-4">
                     {% if "placeholder" in item.food_image.url %}
                     <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top">
+                        class="card-img-top" alt="Carton of chips">
                     {% else %}
                     <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top">
                     {% endif %}
@@ -31,51 +31,51 @@
         </div>
         <div class="form-group pt-3">
             <label for="name">Full Name</label>
-            <input required class="form-control" type="text" name="name" value="{{ request.user.profile.name }}" />
+            <input required class="form-control" id="name" type="text" name="name" value="{{ request.user.profile.name }}" />
         </div>
 
         <div class="form-group pt-3">
-            <label for="name">Email Address</label>
-            <input required class="form-control" type="text" name="email" value="{{ request.user.profile.email }}" />
+            <label for="email">Email Address</label>
+            <input required class="form-control" id="email" type="text" name="email" value="{{ request.user.profile.email }}" />
         </div>
 
         <div class="form-group pt-3">
-            <label for="name">Contact Number</label>
-            <input required class="form-control" type="text" name="phone_number"
+            <label for="phone_number">Contact Number</label>
+            <input required class="form-control" id="phone_number" type="text" name="phone_number"
                 value="{{ request.user.profile.phone_number }}" />
         </div>
 
         <div class="form-group pt-3">
-            <label for="name">Address 1</label>
-            <input required class="form-control" type="text" name="address1"
+            <label for="address1">Address 1</label>
+            <input required class="form-control" id="address1" type="text" name="address1"
                 value="{{ request.user.profile.address1 }}" />
         </div>
         <div class="form-group pt-3">
-            <label for="name">Address 2</label>
-            <input required class="form-control" type="text" name="address2"
+            <label for="address2">Address 2</label>
+            <input required class="form-control" id="address2" type="text" name="address2"
                 value="{{ request.user.profile.address2 }}" />
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-12">
                 <div class="form-group pt-3">
-                    <label for="name">City</label>
-                    <input required class="form-control" type="text" name="city"
+                    <label for="city">City</label>
+                    <input required class="form-control" id="city" type="text" name="city"
                         value="{{ request.user.profile.city }}" />
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-12">
                 <div class="form-group pt-3">
-                    <label for="name">County</label>
-                    <input required class="form-control" type="text" name="county"
+                    <label for="county">County</label>
+                    <input required class="form-control" id="county" type="text" name="county"
                         value="{{ request.user.profile.county }}" />
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-12">
                 <div class="form-group pt-3">
-                    <label for="name">Eir Code</label>
-                    <input required class="form-control" type="text" name="eir_code"
+                    <label for="eir_code">Eir Code</label>
+                    <input required class="form-control" id="eir_code" type="text" name="eir_code"
                         value="{{ request.user.profile.eir_code }}" />
                 </div>
             </div>
