@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
-from django.views.generic.edit import DeleteView
+from django.views.generic.edit import DeleteView, UpdateView
 from django.views import generic, View
 from django.core.mail import send_mail
 from .models import Food_item, Order, AboutMe, Review
@@ -81,7 +81,6 @@ class ReviewDeleteView(DeleteView):
 
     Returns user to home.
     '''
-
     model = Review
     template_name = 'review_confirm_delete.html'
     success_url = '/'
@@ -92,6 +91,25 @@ class ReviewDeleteView(DeleteView):
             return True
         else:
             return False
+
+
+class ReviewUpdateView(UpdateView):
+    '''
+    This allows the user to update reviews from Menu items.
+
+    Returns user to home.
+    '''
+    model = Review
+    template_name = 'review_update.html'
+    fields = [
+        "body",
+    ]
+    success_url = "/"
+
+    # sets review back to False for approval after editing
+    def form_valid(self, form):
+        form.instance.approved = False
+        return super().form_valid(form)
 
 
 class Order_form(View):
