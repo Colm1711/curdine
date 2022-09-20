@@ -15,7 +15,7 @@ class Food_item(models.Model):
 
     class Meta:
         ordering = ['-food_name']
-    
+
     def __str__(self):
         return self.food_name
 

@@ -43,7 +43,7 @@ class Food_Item_View(View):
     def get(self, request, slug, *args, **kwargs):
         item = get_object_or_404(Food_item, slug=slug)
         reviews = item.reviews.filter(approved=True).order_by('-creation_date')
-        context = {   
+        context = {
                     'item': item,
                     'reviews': reviews,
                     'reviewed': False,
@@ -189,7 +189,7 @@ class Order_form(View):
             price += item['price']
             item_ids.append(item['id'])
 
-        # creating the order object    
+        # creating the order object
         order = Order.objects.create(
             price=price,
             name=name,

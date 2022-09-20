@@ -9,7 +9,7 @@ class Food_itemAdmin(SummernoteModelAdmin):
     This is the class that controls the Admins view of the
     food items.
 
-    List how the content is presented to Amdmin User and provides list filter 
+    List how the content is presented to Amdmin User and provides list filter
     panel.
 
     Provides search fields: 'food_name', 'description', 'price'
@@ -22,13 +22,14 @@ class Food_itemAdmin(SummernoteModelAdmin):
     list_filter = ('food_name', 'price')
     summernote_fields = ('description')
 
+
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     """
     This is the class that controls the Admins view of the
     reviews.
 
-    List how the content is presented to Amdmin User and provides list filter 
+    List how the content is presented to Amdmin User and provides list filter
     panel.
 
     Provides search fields: 'name', 'email', 'body'
@@ -49,7 +50,7 @@ class OrderAdmin(admin.ModelAdmin):
     This is the class that controls the Admins view of the
     Orders.
 
-    List how the content is presented to Amdmin User and provides list filter 
+    List how the content is presented to Amdmin User and provides list filter
     panel.
 
     Provides search fields: 'creation_date', 'name', 'address1','email',
