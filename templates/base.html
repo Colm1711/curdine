@@ -18,10 +18,12 @@
     <nav id="navbar" class="navbar navbar-expand-lg py-3 fixed-top">
         <div class="container">
             <a href="{% url 'index' %}" class="navbar-brand text-white">Curdine</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
                         <a href="{% url 'index' %}" class="nav-link">Home</a>
@@ -37,13 +39,14 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             {{ user.profile.name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="{% url 'update_profile' %}">Update Profile</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+                            <a class="dropdown-item" href="{% url 'update_profile' %}">Update Profile</a>
+                            <div class="dropdown-divider"></div>   
+                            <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
                         </div>
                     </li>
                     {% else %}
@@ -55,9 +58,9 @@
             </div>
         </div>
     </nav>
-
     <!-- Main Content -->
     <main class="p-5">
+        {% include 'message.html' %}
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -85,7 +88,6 @@
             </div>
         </div>
     </div>
-
     <!--Footer-->
     <footer class="p-3 mt-5 text-white text-center">
         <div class="container">
@@ -93,17 +95,21 @@
         </div>
         <div class="d-flex justify-content-center">
             <span class="p-3">
-                <a class="text-white" href="https://www.facebook.com/" rel="noopner" target="_blank" aria-label="visit my facebook profile (opens in a new tab)"><i class="bi bi-facebook"></i></a>   
+                <a class="text-white" href="https://www.facebook.com/" rel="noopner" target="_blank"
+                    aria-label="visit my facebook profile (opens in a new tab)"><i class="bi bi-facebook"></i></a>
             </span>
             <span class="p-3">
-                <a class="text-white" href="https://www.instagram.com/" rel="noopner" target="_blank" aria-label="visit my instagram profile(opens in a new tab)"><i class="bi bi-instagram"></i></a>
+                <a class="text-white" href="https://www.instagram.com/" rel="noopner" target="_blank"
+                    aria-label="visit my instagram profile(opens in a new tab)"><i class="bi bi-instagram"></i></a>
             </span>
             <span class="p-3">
-                <a class="text-white" href="https://youtube.com/" rel="noopner" target="_blank" aria-label="visit my youtube account (opens in a new tab)"><i class="bi bi-youtube"></i></a>
-                
+                <a class="text-white" href="https://youtube.com/" rel="noopner" target="_blank"
+                    aria-label="visit my youtube account (opens in a new tab)"><i class="bi bi-youtube"></i></a>
+
             </span>
             <span class="p-3">
-                <a class="text-white" href="https://twitter.com/" rel="noopner" target="_blank" aria-label="visit my twitter account (opens in a new tab)"><i class="bi bi-twitter"></i></a>                
+                <a class="text-white" href="https://twitter.com/" rel="noopner" target="_blank"
+                    aria-label="visit my twitter account (opens in a new tab)"><i class="bi bi-twitter"></i></a>
             </span>
         </div>
     </footer>
