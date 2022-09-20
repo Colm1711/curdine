@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+<!--Delete review page content-->
+{% block content %}
+<div class="container p-5 mb-5 mt-5 h-100 bg-light rounded-3">
+    <form method="post" class="mb-5 mt-5">
+        {% csrf_token %}
+        <div class="text-center">
+        <p class="fw-bold fs-3">Are you sure you want to delete</p><p class="lead"></p>"{{ review }}"?</p>
+        <button type="button" class="btn btn-danger mb-5" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete My Comment</button>
+        </div>
+        <!-- Delete Review Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">No thanks</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No I changed my mind</button>
+                        <button type="submit" class="btn btn-danger onclick="history.back()"">Sure delete my comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
