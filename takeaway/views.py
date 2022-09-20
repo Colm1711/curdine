@@ -76,9 +76,15 @@ class Food_Item_View(View):
 
 
 class ReviewDeleteView(DeleteView):
+    '''
+    This allows the user to delete reviews from Menu items.
+
+    Returns user to home.
+    '''
+
     model = Review
     template_name = 'review_confirm_delete.html'
-    success_url = "food_item.html"
+    success_url = '/'
 
     def test_func(self, review_id):
         review = self.get_object_or_404(Review, review_id)
@@ -90,10 +96,10 @@ class ReviewDeleteView(DeleteView):
 
 class Order_form(View):
     '''
-        This allows the Order page and access to Menu items to be rendered 
+        This allows the Order page and access to Menu items to be rendered
         to user and user to select items to order.
-       
-        Redirects user to confirmation page with order details and total 
+
+        Redirects user to confirmation page with order details and total
         cost price.
 
        '''
@@ -160,7 +166,7 @@ class Order_form(View):
             )
         # adding the item_ids list to the item_ids list.
         order.items.add(*item_ids)
-        
+
         # send confirmation email
         # unpack the order items to add to list
         ordered_item = []
@@ -171,7 +177,7 @@ class Order_form(View):
         body = ('Your order is being processed and with the kitchen crew!\n'
                 f'Your order: {ordered_item}\n'
                 f'Your total price to pay: €{price}')
-        
+
         # email details
         send_mail(
             'Thank you for your order!',
