@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.http import HttpResponse
 from .forms import CustForm, CustUpdateForm, ProfileUpdateForm
 from .models import Profile
 
@@ -52,7 +52,8 @@ def cust_form(request):
             # log in the user after signing up
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
-
+            messages.success(request,
+                             "Thank you for signing up for our site!")
             # redirect user to home after signing in
             return redirect('index')
     else:
@@ -66,6 +67,7 @@ def logout(request):
     This function handles user log out and redirects to the home page
     """
     auth_logout(request)
+    messages.error(request, "You have logged out. See you later :)")
     return HttpResponseRedirect('/')
 
 
@@ -85,7 +87,10 @@ def update_profile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
+            messages.success(request, "Your profile has been updated!")
             return redirect('update_profile')
+        else:
+            messages.error(request, "Your profile has not been updated!!!")
     else:
         user_form = CustUpdateForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.profile)
@@ -105,4 +110,5 @@ def delete_user(request):
     """
     user = User.objects.filter(id=request.user.id)
     user.delete()
+    messages.error(request, "Your profile has been deleted we are sorry to see you go!")
     return HttpResponseRedirect('/')
