@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
+from django.views.generic.edit import DeleteView
 from django.views import generic, View
 from django.core.mail import send_mail
-from .models import Food_item, Order, AboutMe
+from .models import Food_item, Order, AboutMe, Review
 from .forms import ReviewForm
 
 
@@ -72,6 +73,19 @@ class Food_Item_View(View):
             }
 
         return render(request, "food_item.html", context,)
+
+
+class ReviewDeleteView(DeleteView):
+    model = Review
+    template_name = 'review_confirm_delete.html'
+    success_url = "food_item.html"
+
+    def test_func(self, review_id):
+        review = self.get_object_or_404(Review, review_id)
+        if self.request.user.profile.name == review.name:
+            return True
+        else:
+            return False
 
 
 class Order_form(View):
