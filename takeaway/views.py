@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
 from django.views.generic import TemplateView
 from django.views.generic.edit import DeleteView, UpdateView
 from django.views import generic, View
 from django.core.mail import send_mail
+from django.contrib import messages
 from .models import Food_item, Order, AboutMe, Review
 from .forms import ReviewForm
 
@@ -83,7 +85,6 @@ class ReviewDeleteView(DeleteView):
     '''
     model = Review
     template_name = 'review_confirm_delete.html'
-    success_url = '/'
 
     def test_func(self, review_id):
         review = self.get_object_or_404(Review, review_id)
@@ -91,6 +92,11 @@ class ReviewDeleteView(DeleteView):
             return True
         else:
             return False
+
+    def get_success_url(self):
+        messages.error(self.request, "Your review has been deleted!")
+        return reverse('food_item',
+                       kwargs={'slug': self.object.food_item.slug})
 
 
 class ReviewUpdateView(UpdateView):
@@ -104,12 +110,25 @@ class ReviewUpdateView(UpdateView):
     fields = [
         "body",
     ]
-    success_url = "/"
 
     # sets review back to False for approval after editing
     def form_valid(self, form):
         form.instance.approved = False
         return super().form_valid(form)
+
+    def test_func(self, review_id):
+        review = self.get_object_or_404(Review, review_id)
+        if self.request.user.profile.name == review.name:
+            return True
+        else:
+            return False
+
+    def get_success_url(self):
+        message = ("Your review has been updated &"
+                   "with the admin team for review!")
+        messages.success(self.request, message)
+        return reverse('food_item',
+                       kwargs={'slug': self.object.food_item.slug})
 
 
 class Order_form(View):
