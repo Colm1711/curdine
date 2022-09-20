@@ -45,6 +45,7 @@
             <span class="fst-italic mt-5">{{ review.body | linebreaks }}</span>   
             {% if review.name == user.username %}
             <a href="{% url 'review_confirm_delete' review.id %}"><i class="bi bi-trash-fill"></i></a>
+            <a href="{% url 'update_review' review.id %}"><i class="bi bi-pencil-square"></i></a>
             {% endif %}
           </div>
           <!-- for loop ends here -->
