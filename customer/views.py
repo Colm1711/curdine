@@ -27,7 +27,8 @@ def cust_form(request):
     This function handles the saving of data to the database and the view
     presented to the user.
 
-    If user fills in details they will be signed in and redirect to the home page
+    If user fills in details they will be signed in and redirect to the
+    home page.
     """
     if request.method == 'POST':
         form = CustForm(request.POST)
@@ -44,7 +45,7 @@ def cust_form(request):
             user.profile.county = form.cleaned_data.get('county')
             user.profile.email = form.cleaned_data.get('email')
             user.profile.eir_code = form.cleaned_data.get('eir_code')
-            update_user_data(user)  
+            update_user_data(user)
             # load the profile instance created by the signal
             user.save()
             raw_password = form.cleaned_data.get('password1')
@@ -94,13 +95,14 @@ def update_profile(request):
     else:
         user_form = CustUpdateForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.profile)
-        
+
         context = {
                     'user_form': user_form,
                     'profile_form': profile_form,
                     }
 
     return render(request, 'profile_update.html', context)
+
 
 @login_required
 def delete_user(request):
@@ -110,5 +112,6 @@ def delete_user(request):
     """
     user = User.objects.filter(id=request.user.id)
     user.delete()
-    messages.error(request, "Your profile has been deleted we are sorry to see you go!")
+    error_message = "Your profile has been deleted we are sorry to see you go!"
+    messages.error(request, error_message)
     return HttpResponseRedirect('/')
