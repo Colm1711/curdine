@@ -44,6 +44,8 @@
 6.    I want to view reviews so that I know what others thought of previous orders.
 7.    I want to be able to cancel my order.
 8.    I want to be able to modify my order.
+9.    I want to view About me page so that I know more about the company
+10.   I want to see confirmation page of my order so that I know how much it will cost and they have my correct details.
 
 -   ### Registered User
 
@@ -52,6 +54,7 @@
 3.    I want to delete my review.
 4.    I want to modify my review.
 5.    I want to see my order history.
+6.    I want to modify my profile details
     
 -   ### Site Owner
 
@@ -62,12 +65,16 @@
 
 ## Scope
 
-1. For first release, the scope is to rpovide users ability to register, login and oder food.
+1. For first release, the scope is to provide users ability to register, login and oder food.
 2. Future scope:
+    1. User can cancel order
+    2. User modify my order
+    3. User see order history
+
 
 #### Overview
 
-The Tweet analyzer is for the modeling of sentiment analysis to stock data.  It's purpose is to provide an easy way for investors to get real time stock assessments for trading or trading analysis to review prior to investing.  This is to help make better investment decisions and to try to see ahead of time how a stock will perform.
+Article from above is from 2021. The listed most popular takeaway by Irish people during lockdown was chippers and after chips the most ordered item was sauce. My brother is heading away soon to begin his adventure in Canada in honour of him and his help for this project it lead me to pay homage by picking the most popular dish there Poutine, which is a delicacy
 
 
 ## Technical Design
