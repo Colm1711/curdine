@@ -4,6 +4,11 @@
 {% block content %}
 <div class="p-5 container">
     <h1 class="mb-3">Order Now</h1>
+    <!-- Error message if no items selected -->
+    <div class="alert alert-danger alert-danger fade show d-none text-center mt-2" role="alert">
+        <strong>Holy Cheese!</strong> You have not selected food item!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <form id="sectionForm" method="POST">
         {% csrf_token %}
         <div class="row row-cols-1 row-cols-md-3">
@@ -22,7 +27,8 @@
                         <p class="card-text">&euro;{{ item.price }}</p>
                         <div class="form-group form-check required">
                             <label class="form-check-label"></label>
-                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required>
+                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}"
+                                required>
                         </div>
                     </div>
                 </div>
@@ -31,12 +37,14 @@
         </div>
         <div class="form-group pt-3">
             <label for="name">Full Name</label>
-            <input required class="form-control" id="name" type="text" name="name" value="{{ request.user.profile.name }}" />
+            <input required class="form-control" id="name" type="text" name="name"
+                value="{{ request.user.profile.name }}" />
         </div>
 
         <div class="form-group pt-3">
             <label for="email">Email Address</label>
-            <input required class="form-control" id="email" type="text" name="email" value="{{ request.user.profile.email }}" />
+            <input required class="form-control" id="email" type="text" name="email"
+                value="{{ request.user.profile.email }}" />
         </div>
 
         <div class="form-group pt-3">
@@ -80,11 +88,6 @@
                 </div>
             </div>
         </div>
-        <!-- Error message if no items selected -->
-        <div class="alert alert-danger alert-danger fade show d-none text-center mt-2" role="alert">
-            <strong>Holy Cheese!</strong> You have not selected food item!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary mt-5" onClick="valthis()">
             Submit Order
@@ -101,7 +104,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back to
                             Order</button>
-                        <button onclick="form_submit()"  class="btn btn-primary" type="submit">Place Order!</button>
+                        <button onclick="form_submit()" class="btn btn-primary" type="submit">Place Order!</button>
                     </div>
                 </div>
             </div>
