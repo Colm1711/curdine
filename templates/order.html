@@ -4,7 +4,7 @@
 {% block content %}
 <div class="p-5 container">
     <h1 class="mb-3">Order Now</h1>
-    <form method="POST">
+    <form id="sectionForm" method="POST">
         {% csrf_token %}
         <div class="row row-cols-1 row-cols-md-3">
             {% for item in items %}
@@ -14,15 +14,15 @@
                     <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         class="card-img-top" alt="Carton of chips">
                     {% else %}
-                    <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top">
+                    <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top rounded">
                     {% endif %}
                     <div class="card-body">
                         <h2 class="card-title">{{ item }}</h2>
                         <p class="card-text">{{item.description}}</p>
                         <p class="card-text">&euro;{{ item.price }}</p>
-                        <div class="form-group form-check">
+                        <div class="form-group form-check required">
                             <label class="form-check-label"></label>
-                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required>
                         </div>
                     </div>
                 </div>
@@ -80,8 +80,13 @@
                 </div>
             </div>
         </div>
+        <!-- Error message if no items selected -->
+        <div class="alert alert-danger alert-danger fade show d-none text-center mt-2" role="alert">
+            <strong>Holy Cheese!</strong> You have not selected food item!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary mt-5" onClick="valthis()">
             Submit Order
         </button>
 
@@ -96,7 +101,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back to
                             Order</button>
-                        <button type="submit" class="btn btn-primary">Place Order!</button>
+                        <button onclick="form_submit()"  class="btn btn-primary" type="submit">Place Order!</button>
                     </div>
                 </div>
             </div>
