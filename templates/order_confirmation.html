@@ -21,7 +21,7 @@
             <p>{{ item.name }} <span class="pl-3">{{ item.price }}</span></p>
             {% endfor %}
             <h3 class="pb-3">Customer Details:</h3>
-            {% for detail in user %}
+            {% for detail in order_user %}
             <p class="fst-italic">{{detail}}</p>
             {% endfor %}
             <p class="fw-bold pt-4">Total Due: {{ price }}</p>
