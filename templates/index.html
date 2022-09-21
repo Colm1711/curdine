@@ -5,19 +5,20 @@
 {% load static %}
 
 <!--Showcase landing-->
-<section class="mt-2 pt-5 text-center">
-        <div class="bg-image text-center my-5">
-                <h1 class="display-2">Welcome to Curdine</h1>
-                <div id="content" class="container mt-5">
-                        <p class="lead text-muted">We are bringing the popular Canadian dish to you in Ireland! It's packet full with all
-                                the things that you love and know well.</p>
-                 </div>
+<section class="p-5 p-lg-0 pt-lg-2 text-center text-sm-start mt-5">
+        <div class="container landing">
+                <div class=" d-sm-flex align-items-center justify-content-between">
+                        <div>
+                                <h1 class="display-2">Welcome to Curdine</h1>
+                                <div id="content" class="container mt-5">
+                                        <p class="lead text-muted">We are bringing the popular Canadian dish to you in
+                                                Ireland! It's packet full with all
+                                                the things that you love and know well.</p>
+                                </div>
+                        </div>
+                        <img class="img-fluid rounded" src="{% static '/images/hero-image.jpg' %}"
+                                alt="Image of poutine with Canadian flag">
+                </div>
         </div>
 </section>
-<!--Landing image-->
-<section class="text-center">
-        <img class="img-fluid p-2" src="{% static '/images/hero-image.jpg' %}" alt="Image of poutine with Canadian flag">
-</section>
-
-
 {% endblock %}
