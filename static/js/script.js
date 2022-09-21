@@ -40,7 +40,6 @@ function valthis() {
             $("#exampleModal").modal('show');
             } else {
                 $('.alert').removeClass('d-none').addClass('show');
-                window.scrollTo({top: 0, behavior: 'smooth'});
             }   
     }
 
