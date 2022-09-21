@@ -5,20 +5,36 @@
 {% load static %}
 
 <!--Showcase landing-->
-<section class="p-5 p-lg-0 pt-lg-2 text-center text-sm-start mt-5">
+<section class="p-5 p-lg-0 pt-lg-2 text-sm-start mt-3 bg-light">
         <div class="container landing">
                 <div class=" d-sm-flex align-items-center justify-content-between">
                         <div>
                                 <h1 class="display-2">Welcome to Curdine</h1>
                                 <div id="content" class="container mt-5">
-                                        <p class="lead text-muted">We are bringing the popular Canadian dish to you in
+                                        <p class="lead">We are bringing the popular Canadian dish to you in
                                                 Ireland! It's packet full with all
                                                 the things that you love and know well.</p>
                                 </div>
+                                
                         </div>
-                        <img class="img-fluid rounded" src="{% static '/images/hero-image.jpg' %}"
-                                alt="Image of poutine with Canadian flag">
+                        <img class="img-fluid w-50 d-none d-sm-block" src="{% static 'images/hero.png' %}" alt="Picture of chips">
                 </div>
         </div>
 </section>
+    <!--Menu Section-->
+    <section class="p-5" id="learn">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                        <img class="img-fluid" src="{% static 'images/Cooking.png' %}" alt="Man cooking">
+                </div>
+                <div class="col-md p-5">
+                    <h2>Are chefs are Ready and waiting</h2>
+                    <p class="lead">See what we have cooked up for you and our twists on the Candian classic!</p>
+                    <a href="{% url 'menu' %}" class="text-decoration-none menubtn"> Menu</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
