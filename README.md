@@ -11,11 +11,11 @@
         4. [Physical database model](#physical-database-model)
         5. [Models](#models)
             1. [User Model](#user-model)
-            2. [Profile Model](#meal-model)
-            3. [Food_item Model](#category-model)
-            4. [Review Model](#allergen-model)
-            5. [Order Model](#drink-model)
-            6. [AboutMe Model](#drinkcategory-model)
+            2. [Profile Model](#profile-model)
+            3. [Food_item Model](#food_item-model)
+            4. [Review Model](#review-model)
+            5. [Order Model](#order-model)
+            6. [AboutMe Model](#aboutme-model)
     2. [Scope](#scope)
         1. [User Stories](#user-stories)
     3. [Skeleton](#skeleton)
@@ -104,4 +104,53 @@ The project is organised into a two applications, developed using the Django Fra
 App details as follows:
 - customer - this app contains information about the user and is extended by the profile model to contain further details such as email, fullname, phone number and address details.
 - takeaway - this app contains the menu structure, users can choose between the varies meals from menu.  Clicking individual items opens a sub  page where users can see detailed food information and can leave a review if they are a rigestered user.
+
+To complement the apps there are
+- project: Project level files - settings.py for project level settings and urls.py to route the website URLS
+- templates: Containing the base.html, allauth(django authentication)
+- templates (app level): each app has it's own templates directory for HTML to consider portability and re-use.
+- urls (app level): each app has it's own url.py file to consider portability and re-use.
+- static: Base css and Javascript files
+- manage.py: This file is used to start the site and perform funcions during development
+- README.md: Readme documentation
+- Procfile: To run the application on Heroku
+- Requirements.txt: Containing the project dependencies
+Note: Environment variable values are not exposed in the source code, they are stored locally in env.py that is not checked in(and listed in .gitignore, and on Heroku in app settings
+
+
+#### Physical database model
+
+This model contains all fields stored in the database collections with their data type and mimics the structure of what is actually stored in the Postgres database 
+<br>![Database model]()
+
+#### Models
+- The following models were created to represent the database model structure for the website
+
+##### User Model
+- The User model contains information about the user. It is part of the Django allauth library
+- The model contains the following fields: username, password, first_name, last_name, is_staff, is_active, is_superuser, last_login, date_joined
+
+##### Profile Model
+- The Meal model contains information about user such as contains further details such as email, fullname, phone number and address details for delivery purposes.
+- It contains User as a foreign-key.
+- The model contains the following fields:  email, Name, phone_number, address1, address2, city, county, eir_code
+
+##### Food_item Model
+- The category model contains the available meal items
+- The model contains the following fields: food_name, food_image, description, price, slug
+
+##### Review Model
+- The Review model is the review model for food items for user to leave a review on a food item to let restraunt and others know thoughts on food item.
+- It contains Food_item as a foreign-key.
+- When user submits review it is sent to the back end for the admin to approve before being displayed to the site.
+- The model contains the following fields: Food_item, name, email, body, creation_date, approved.
+
+##### Order Model
+- The Order model the user to be able to submit order from the website with items and address details.
+- The model contains the following fields: creation_date, email, name, phone_number, address1, address2, city, county, eir_code.
+
+##### AboutMe Model
+- The About me model for the site owner to be able to update about me section of website with text on backend.
+- The model contains the following fields: about_text_body, date_modified.
+
 
