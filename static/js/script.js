@@ -21,3 +21,28 @@ function initMap() {
         map: map
     });
 }
+
+/*  Function for Order form to validate if item is not selected raise an alert 
+    Opens Modal if successful.
+*/
+function valthis() {
+    var checkBoxes = document.getElementsByClassName( 'form-check-input');
+    var isChecked = false;
+    
+    
+        for (var i = 0; i < checkBoxes.length; i++) {
+            if ( checkBoxes[i].checked ) {
+                isChecked = true;
+            };
+        };
+        if ( isChecked ) {
+            $("#exampleModal").modal('show');
+            } else {
+                $('.alert').removeClass('d-none').addClass('show');
+            }   
+    }
+
+/* Submits Order form in Modal */    
+function form_submit() {
+        document.getElementById("sectionForm").submit();
+       }    
