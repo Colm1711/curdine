@@ -1,4 +1,7 @@
-#navbar, footer{
+/* Landing page*/
+
+#navbar,
+footer {
     background-color: #aad4b3;
 }
 
@@ -8,6 +11,25 @@
     border-radius: 10px;
 }
 
-.bi-trash-fill{
+/*Showcase on Landing page*/
+#content {
+    position: relative;
+    animation-name: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0% {
+        left: -1000px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+/* Food Item Review */
+.bi-trash-fill {
     color: red;
 }
