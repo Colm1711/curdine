@@ -38,6 +38,10 @@ footer {
     color: red;
 }
 
+.paginationbtn{
+  background-color: #C8E6AC;
+  color: black;
+}
 
 /* Hover on sign up and menu button*/
 .signup, .menubtn{
