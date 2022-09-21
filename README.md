@@ -153,4 +153,53 @@ This model contains all fields stored in the database collections with their dat
 - The About me model for the site owner to be able to update about me section of website with text on backend.
 - The model contains the following fields: about_text_body, date_modified.
 
+## Scope
+### User stories:
+
+#### First time user
+1.	As a first time user, I want to be able to see menu and what I can order.
+2.	As a first time user, I want to be able to navigate site easily
+3.	As a first time user, I want clear information on where the restaurant is located
+4.	As a first time user, I want to be able to order food online
+5.	As a first time user, I want to view reviews so that I know what others thought of previous orders
+6.	As a first time user, I want to view About me page so that I know more about the company and it’s ethos
+7.	As a logged in user, I want to be able to see other user’s comments and reviews
+8.	As a logged in user, I want to be able to be able to leave reviews
+9.	As a first time user, I want to be able to delete my review
+10.	As a first time user, I want to see confirmation page of my order so that I know how much it will cost and they have my correct details
+11.	As a first time user, I want to be able to know my order has been accepted
+12.	As a first time user, I want to know about the business and it’s ethos
+13.	As a first time user, I want to be able to cancel my order
+14. As a logged in user, I want to be able to to sign in to, or create an account
+15. As a logged in user, I want to be able to log out of an account
+16. As a first time user, I want to see confirmation page of my order so that I know how much it will cost and they have my correct details
+17. As a first time user, I want to be able to view the business’ social media
+18. As a logged in user, I want to be able to cancel my order
+19. As a logged in user, I want to be able to modify my order
+
+
+#### Site Owner
+20.	As a site owner, I want to be able to Approve reviews
+21.	As a site owner, I want users to be to view our full menu
+22.	As a site owner, I want users to be able to view the food descriptions and prices
+23.	As a site owner, I want to Manage reviews
+24.	As a site owner, I want users to be able to see location of business
+25.	As a site owner, I want users to be able to leave a comment or review
+26.	As a site owner, I want users to be able to view other comments and reviews
+27.	As a site owner, I want users to be able to edit and delete comments or reviews
+28.	As a site owner, I want users to be able to find out about our business ethos
+29.	As a site owner, I want users to be able to navigate the site easily and quickly
+30. As a site owner, I want users to be able to sign in to, or create an account
+31. As a site owner, I want users to be able to log out of their account
+32. As a site owner, I want users to be able to see the menu
+33. As a logged in administrator, I want to be able to review and approve or delete user comments.
+34. As a site owner, I want users to be able to view the business’ social media
+35. As a logged in administrator, I want to be able to create, edit or remove content on the website.
+
+#### Error Flow
+36. As first time, I user should be able to navigate back through the site structure in case of page not found without using the browser back button.
+37. As a site owner, I want a 400 page that enables users to be able to return to valid areas of the site without using browser controls.
+38. As a site owner, I want a 403 page that enables users to be able to return to valid areas of the site without using browser controls.
+39. As a site owner, I want a 404 page that enables users to be able to return to valid areas of the site without using browser controls.
+40. As a site owner, I want a 500 page that enables users to be able to return to valid areas of the site without using browser controls.
 
