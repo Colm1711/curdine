@@ -9,13 +9,15 @@
       <!--Food Item Name-->
       <h1 class="display-5 fw-bold">{{ item }}</h1>
       <!--Food Item Picture-->
+      <div class="image-container">
       {% if "placeholder" in food_item.food_image.url %}
       <img
         src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Image of the food item" class="card-img-top rounded">
+        alt="Image of the food item" class="card-img rounded">
       {% else %}
-      <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top img-fluid rounded">
+      <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top img-fluid w-100 rounded">
       {% endif %}
+    </div>
     </div>
   </div>
   <!--Food Item Description-->
