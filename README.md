@@ -260,3 +260,309 @@ The site is straightforward to navigate, with a high contrasting navigation bar 
 
 The background is neutral but bright, the images are not the focal point of the home page so the user has an immediate feeling to search for the of the menu to see the food.
 
+### Colours
+
+The colour palette is 
+
+After choosing a colour scheme I tested a number of palette options to make sure the it met accessibility standards.
+
+<br>![Database model](#)
+
+### Typography
+
+
+## Features
+
+The site contains 11 pages and
+1. Home page
+2. Full menu
+3. Food Item
+4. Order
+5. Order Confirmation
+6. Update Review
+7. Delete Review
+8. About
+9. Update Profile
+10. Login
+11. Sign up
+
+
+### Page 1 - Home page
+
+
+## Technologies Used
+
+### Languages
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JS ES6](https://en.wikipedia.org/wiki/JavaScript)
+- [Django](https://www.djangoproject.com/)
+- [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+#### Python Libraries
+
+asgiref==3.5.2
+cloudinary==1.29.0
+crispy-bootstrap5==0.6
+dj-database-url==1.0.0
+dj3-cloudinary-storage==0.0.6
+Django==3.2.15
+django-crispy-forms==1.14.0
+django-summernote==0.8.20.0
+gunicorn==20.1.0
+psycopg2==2.9.3
+pytz==2022.2.1
+sqlparse==0.4.2
+
+
+### Frameworks & Tools
+- [Bootstrap 5.0](https://getbootstrap.com/docs/5.0) - for general site layout, grid, flex, carousel.
+- [Postgres](https://www.postgresql.org/) - the site is deployed on Heroku using a Postgress database.
+- [SQLLite](https://www.sqlite.org/index.html) - this database was used in local development.
+- [VSCode](https://code.visualstudio.com/) - my IDE of choice for this project.
+- [Gitpod](https://gitpod.io/) - used occasionally for tutor support.
+- [Github](https://github.com/) - used as the code repository.
+- [Google Fonts](https://fonts.google.com/) - used for the main body font and some headings.
+- [Balsamiq](https://balsamiq.com/) -  used to create the website wireframes.
+- [Font Awesome](https://fontawesome.com/) - Font awesome was used to provide the relevant fonts/icons for the website social media icon links.
+- [JQuery](https://jquery.com) - JQuery was used in some javascript files for DOM manipulation
+- [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - for validation of the css in the project.
+- [HTML Markup Validation Service](https://validator.w3.org/) - for validation the HTML in the project.
+- [Firefox dev tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) - troubleshooting and debugging of the project code.
+- [Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) - for performance, accessibility, progressive web apps, SEO analysis of the project code.
+- [Responsive Design](http://ami.responsivedesign.is/) - for website mockup.
+- [JSHint](https://jshint.com/) - for javascript validation.
+- [PEP8](https://www.python.org/dev/peps/pep-0008/) - for python validation.
+- [Quick Database diagrams](https://www.quickdatabasediagrams.com)- for the database schema diagram.
+
+## Validation
+
+### HTML Validation
+The HTML of the each page of the site was validated using [W3C Markup Validation Service](https://validator.w3.org/).  All pages returned a pass with 0 errors and 0 warnings.
+
+
+
+
+### CSS Validation
+The [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/validator) was used to validate the CSS of the website. 
+
+The custom CSS file for the site passed with 0 errors.
+
+<details><summary>Custom CSS file</summary>
+<img src="#">
+</details>
+
+
+### JS Validation
+The Javascript of the each page of the site was validated using [JSHint validation tool](https://jshint.com/).  All pages returned a pass with 0 errors and 0 warnings.
+
+<details><summary>script.js</summary>
+<img src="#">
+</details>
+
+
+### Py Validation
+The Python of the each page of the site was validated using [Python validation tool](http://pep8online.com/).  All pages returned a pass with 0 errors and 0 warnings.
+
+<details><summary>Details</summary>
+
+#### Admin py-validation
+
+<details><summary>#.py</summary>
+<img src="#">
+</details>
+
+
+#### Forms py validation
+
+<details><summary>/forms.py</summary>
+<img src="#">
+</details>
+
+
+#### Models py validation
+
+<details><summary>#models.py</summary>
+<img src="#">
+</details>
+
+
+#### Urls py validation
+
+<details><summary>#/urls.py</summary>
+<img src="#">
+</details>
+
+
+#### Views py validation
+
+<details><summary>#/views.py</summary>
+<img src="#">
+</details>
+
+
+#### Urls py validation
+
+<details><summary>#/urls.py</summary>
+<img src="#">
+</details>
+
+</details>
+
+### Accessibility
+The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was used to ensure the website met high accessibility standards. All pages returned 0 errors.
+
+<details><summary>Home</summary>
+<img src="#">
+</details>
+<details><summary>Menus</summary>
+<img src="#">
+</details>
+<details><summary>About</summary>
+<img src="#">
+</details>
+<details><summary>Order</summary>
+<img src="#">
+</details>
+<details><summary>Profile</summary>
+<img src="#">
+</details>
+
+### Performance 
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) was used to measure the performance and speed of the website -performance, accessibility, best practice and SEO with results below:
+
+<details><summary>Home</summary>
+<img src="#">
+</details>
+<details><summary>Menu</summary>
+<img src="#">
+
+</details>
+<details><summary>About</summary>
+<img src="#">
+</details>
+<details><summary>Order</summary>
+<img src="#">
+</details>
+<details><summary>Profile</summary>
+<img src="#">
+</details>
+
+### Testing user stories
+
+1. As a first time user, I want to be able to view the type of food the restaurant provides
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  Menu page   | Select any menu option from main nav bar           |     Menu page is displayed with images and information                | Works as expected |
+|      Menu page       |    Select menu item links        |    Menu page is displayed with images and information by category                 | Works as expected |
+
+<details><summary>Images</summary>
+<img src="#">
+<img src="#">
+</details>
+
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| Site images not rendering on Heroku | Change source path from relative to static directory |
+
+
+## Deployment
+
+### Heroku
+
+This application has been deployed from Github using Heroku. Here's how:
+
+1. Create an account at heroku.com
+2. Create an app, give it a name for example ci-ms4-elginis_restaurant, and select a region
+3. Under resources search for postgres, and add a Postgres database to the app
+
+Heroku Postgres
+
+1. Note the DATABASE_URL, this can be set as an environment variable in Heroku and your local deployment(env.py)
+
+2. Install the plugins dj-database-url and psycopg2-binary.
+
+3. Run pip3 freeze > requirements.txt so both are added to the requirements.txt file
+
+4. Create a Procfile with the text: web: gunicorn elginis_restuarant.wsgi:application for example
+
+5. In the settings.py ensure the connection is to the Heroku postgres database
+
+6. Ensure debug is set to false in the settings.py file
+
+7. Add localhost/127.0.0.1, and elginisrestaurant.herokuapp.com to the ALLOWED_HOSTS variable in settings.py
+
+8. Run "python3 manage.py showmigrations" to check the status of the migrations
+
+9. Run "python3 manage.py migrate" to migrate the database
+
+10. Run "python3 manage.py createsuperuser" to create a super/admin user
+
+11. Run "python3 manage.py loaddata categories.json" on the categories file in products/fixtures to create the categories
+
+12. Run "python3 manage.py loaddata products.json" on the products file in products/fixtures to create the products
+
+13. Install gunicorn and add it to the requirements.txt file using the command pip3 freeze > requirements.txt
+
+14. From the CLI login to Heroku using the command heroku git:remote -a ci-ms4-elginisrestaurant
+
+15. Disable collectstatic in Heroku before any code is pushed using the command heroku config:set DISABLE_COLLECTSTATIC=1 -a ci-ms4-elginisrestaurant
+
+16. Push the code to Heroku using the command git push heroku master
+
+17. Ensure the following environment variables are set in Heroku
+18. Heroku Env variables
+
+19. Connect the app to GitHub, and enable automatic deploys from main
+Heroku Postgres
+
+20. Click deploy to deploy your application to Heroku for the first time
+
+21. Click on the link provided to access the application
+
+22. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
+
+
+### Forking the GitHub Repository 
+
+By forking this GitHub repository you are making a copy of the original to view or make changes without affecting the original. You can do this by following these steps...
+
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS3_MitsurukiFMS).
+2. Click 'Fork' (last button on the top right of the repository page).
+3. You will then have a copy of the repository in your own GitHub account. 
+
+### Making a Local Clone
+
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS4_Elginis_Restaurant).
+2. Click on the 'Code' button (next to 'Add file'). 
+3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+4. Then open Git Bash.
+5. Change the current working directory to where you want the cloned directory to be made.
+6. In your IDE's terminal type 'git clone' followed by the URL you copied.
+7. Press Enter. 
+8. Your local clone will now be made.
+
+## Credits
+
+*All credit also included in the page files.*
+
+### Media
+
+Media from the following artists was used throughout the site.
+
+- [Pexels](https://www.pexels.com/)
+- [Shutterstock](https://www.shutterstock.com/discover/stock-assets-uk-0220?kw=free%20images&c3apidt=p44044564070&gclid=CjwKCAjwloCSBhAeEiwA3hVo_aWCMHb_myvjFHu9hDOK2H8NkLvJ2OUMurc0or0G-aCEET7y-l4RdhoCnyQQAvD_BwE&gclsrc=aw.ds)
+- [Postgress-Deployment](https://github.com/pmeeny/CI-MS4-LoveRugby#deployment)
+- Code for comments adapted from Code Institute Django blog
+
+### Acknowledgements: 
+
+- To my girlfriend Ewelina Wolska and my brother Fintan for testing, support, feedback, permissions for content and images on this project. 
+- To my mentor Mo Shami for his invaluable guidance and direction.
+- To the Code Institute slack community of students.
+- To the Code Institute Tutors
+
