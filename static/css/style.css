@@ -1,11 +1,12 @@
 body {
     overflow-x: hidden !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Landing page*/
 #navbar,
 footer {
-    background-color: #aad4b3;
+    background-color: #C8E6AC;
 }
 
 #map {
@@ -41,9 +42,9 @@ footer {
 /* Hover on sign up and menu button*/
 .signup, .menubtn{
     border-radius: 4px;
-    background-color: #aad4b3;
+    background-color: #C8E6AC;
     border: none;
-    color: #fff;
+    color: black;
     text-align: center;
     font-size: 32px;
     padding: 16px;
