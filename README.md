@@ -203,3 +203,60 @@ This model contains all fields stored in the database collections with their dat
 39. As a site owner, I want a 404 page that enables users to be able to return to valid areas of the site without using browser controls.
 40. As a site owner, I want a 500 page that enables users to be able to return to valid areas of the site without using browser controls.
 
+## Skeleton
+
+### Wireframes
+
+<details><summary>Home</summary>
+<img src="#">
+</details>
+
+<details><summary>About</summary>
+<img src="#">
+</details>
+
+<details><summary>Menus</summary>
+<img src="#">
+</details>
+
+<details><summary>Update Profile</summary>
+<img src="#">
+</details>
+
+<details><summary>Order</summary>
+<img src="#">
+</details>
+
+<details><summary>Order Confirmation</summary>
+<img src="#">
+</details>
+
+<details><summary>Food Item Details</summary>
+<img src="#">
+</details>
+
+<details><summary>Sign In</summary>
+<img src="#">
+</details>
+
+<details><summary>Sign Up</summary>
+<img src="#">
+</details>
+
+<details><summary>Logout</summary>
+<img src="#">
+</details>
+
+<details><summary>Errors</summary>
+<img src="#">
+</details>
+
+## Surface
+### Design choices
+
+The overall design of the website was to keep the site as clean and simple as possible, to allow the imagery of the food to shine through, and to choose colours that didn’t distract the user or take focus away from main purpose.
+
+The site is straightforward to navigate, with a high contrasting navigation bar to enable ease of use for the user to find other main pages.
+
+The background is neutral but bright, the images are not the focal point of the home page so the user has an immediate feeling to search for the of the menu to see the food.
+
