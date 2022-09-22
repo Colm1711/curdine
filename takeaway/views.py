@@ -183,8 +183,6 @@ class Order_form(View):
             # order_items dictionary
             order_items['items'].append(item_data)
 
-
-
         # looping through selected items to get price and items to
         # overall order
         for item in order_items['items']:
