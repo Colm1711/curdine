@@ -70,7 +70,7 @@ class Order(models.Model):
 class AboutMe(models.Model):
     """
     This is the About me model for the site owner to
-    be able to update about me section of website with text and images.
+    be able to update about me section of website with text.
     """
     about_text_body = models.TextField()
     date_modified = models.DateTimeField(auto_now=True)
