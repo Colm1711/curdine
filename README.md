@@ -474,7 +474,14 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| Site images not rendering on Heroku | Change source path from relative to static directory |
+|  Installed incorrect django version | solved - pip3 install 'django<4' gunicorn |
+| ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects | solved - create runtime.txt & vers 9(python-3.9.13) |
+| Profile table - changed zip code from Integarfield to Charfield lead to value error | solved - delete table from database and run migrations. |
+| Profile Table - email set null = True caused integratiy error | solved - remove null value |
+| You can submit order with no items | solved - add custom jquery to check if checkformcontrol has checked item |
+| Order confirmation page doesn't have logged in user in Sign Up/Login in nav bar | solved -change context 'user' to 'oreder_user' |
+| No alert for unchecked item | unresolved |
+
 
 
 ## Deployment
