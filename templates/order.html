@@ -16,8 +16,8 @@
                 <div class="col-md-8 col-sm-12">
                     <div class="flex-row">
                         <div class="form-group form-check options">
-                            <input id="{{item}}" type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required>
-                            <label class="form-check-label" for="{{item}}">{{ item }}</label>
+                            <input id="{{item.slug}}" type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required>
+                            <label class="form-check-label" for="{{item.slug}}">{{ item }}</label>
                         </div>
                     </div>
                     <p class="fw-bold mt-2">&euro;{{ item.price }}</p>
