@@ -296,6 +296,118 @@ The site contains 11 pages and
 
 ### Page 1 - Home page
 
+#### Feature 1 - Header and navigation Bar, the header and navigation bar are shown across all pages.
+The header shows the logo of the website, as well as a navigation bar with quick access to the main pages of the website. 
+<br>![Navbar model](readme/navbar.png)
+
+2.	As a first time user, I want to be able to navigate site easily
+4.	As a first time user, I want to be able to order food online
+14. As a logged in user, I want to be able to to sign in to, or create an account
+15. As a logged in user, I want to be able to log out of an account
+28.	As a site owner, I want users to be able to find out about our business ethos
+29.	As a site owner, I want users to be able to navigate the site easily and quickly
+30. As a site owner, I want users to be able to sign in to, or create an account
+31. As a site owner, I want users to be able to log out of their account
+
+#### Feature 2 - Footer - has location, contact information and links to social media all of which open on new tab by default.
+The footer features the business’ social media links, as well as links to the main pages the user would want to navigate. ALso holds contact information and google maps to show location
+<br>![Footer model](readme/footer.png)
+
+This feature covers the following user stories
+
+3.	As a first time user, I want clear information on where the restaurant is located
+17. As a first time user, I want to be able to view the business’ social media
+24.	As a site owner, I want users to be able to see location of business
+29.	As a site owner, I want users to be able to navigate the site easily and quickly
+34. As a site owner, I want users to be able to view the business’ social media
+
+### Page 2 - Menu page
+
+#### Feature 3 Holds all the menu items. It clearly displays name of food, description and prices. Page is set up for pagination. 
+<br>![Menu model](readme/menu_page.png)
+This feature covers the following user stories:
+
+1.	As a first time user, I want to be able to see menu and what I can order.
+21.	As a site owner, I want users to be to view our full menu
+22.	As a site owner, I want users to be able to view the food descriptions and prices
+32. As a site owner, I want users to be able to see the menu
+
+### Page 3 - Food Item page
+
+#### Feature 4 -Display name of food, description and prices. Page is set up for users to leave reviews which are set to go for admin approval before displaying. They can then update these but will trigger to go for approval and delete review.
+<br>![Review model](readme/reviews.png)
+<br>![Review model](readme/leave_review.png)
+<br>![Review model](readme/update_review.png)
+<br>![Review model](readme/delete_review.png)
+
+This feature covers the following user stories:
+
+5.	As a first time user, I want to view reviews so that I know what others thought of previous orders
+7.	As a logged in user, I want to be able to see other user’s comments and reviews
+8.	As a logged in user, I want to be able to be able to leave reviews
+9.	As a first time user, I want to be able to delete my review
+20.	As a site owner, I want to be able to Approve reviews
+23.	As a site owner, I want to Manage reviews
+25.	As a site owner, I want users to be able to leave a comment or review
+26.	As a site owner, I want users to be able to view other comments and reviews
+27.	As a site owner, I want users to be able to edit and delete comments or reviews
+33. As a logged in administrator, I want to be able to review and approve or delete user comments.
+35. As a logged in administrator, I want to be able to create, edit or remove content on the website.
+
+### Page 4 - Order Now
+
+#### Feature 5 Order Page Form - allows users to select items to order and fill out details to deliver to.
+<br>![Navbar model](readme/order_1.png)
+This feature covers the following user stories:
+
+1.	As a first time user, I want to be able to see menu and what I can order.
+4.	As a first time user, I want to be able to order food online.
+21.	As a site owner, I want users to be to view our full menu
+22.	As a site owner, I want users to be able to view the food descriptions and prices
+32. As a site owner, I want users to be able to see the menu
+35. As a logged in administrator, I want to be able to create, edit or remove content on the website.
+
+#### Feature 6 Order Confirmation Page - Confirms details of order, cost and where to deliver to.
+<br>![Navbar model](readme/order_conf.png)
+This feature covers the following user stories:
+
+4.	As a first time user, I want to be able to order food online
+10.	As a first time user, I want to see confirmation page of my order so that I know how much it will cost and they have my correct details
+11.	As a first time user, I want to be able to know my order has been accepted
+16. As a first time user, I want to see confirmation page of my order so that I know how much it will cost and they have my correct details
+21.	As a site owner, I want users to be to view our full menu
+22.	As a site owner, I want users to be able to view the food descriptions and prices
+32. As a site owner, I want users to be able to see the menu
+
+### Page 5 - About Me
+
+#### Feature 7 - Share company ethos, content is updated from the backend.
+<br>![Navbar model](readme/ethos.png)
+This feature covers the following user stories:
+
+12.	As a first time user, I want to know about the business and it’s ethos
+24.	As a site owner, I want users to be able to see location of business
+28.	As a site owner, I want users to be able to find out about our business ethos
+29.	As a site owner, I want users to be able to navigate the site easily and quickly
+35. As a logged in administrator, I want to be able to create, edit or remove content on the website.
+
+### Page 6 - Sign In/ Log In and Update Profile
+<br>![Register model](readme/register.png)
+<br>![Login model](readme/login_dets.png)
+<br>![Update model](readme/update_profile.png)
+<br>![Delete model](readme/update_delete_profile.png)
+These features covers the following user stories:
+
+8.	As a logged in user, I want to be able to be able to leave reviews
+9.	As a first time user, I want to be able to delete my review
+14. As a logged in user, I want to be able to to sign in to, or create an account
+15. As a logged in user, I want to be able to log out of an account
+25.	As a site owner, I want users to be able to leave a comment or review
+26.	As a site owner, I want users to be able to view other comments and reviews
+27.	As a site owner, I want users to be able to edit and delete comments or reviews
+30. As a site owner, I want users to be able to sign in to, or create an account
+31. As a site owner, I want users to be able to log out of their account
+35. As a logged in administrator, I want to be able to create, edit or remove content on the website.
 
 ## Technologies Used
 
