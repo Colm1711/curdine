@@ -342,10 +342,11 @@ media icon links.
 ## Validation
 
 ### HTML Validation
-The HTML of the each page of the site was validated using [W3C Markup Validation Service](https://validator.w3.org/).  All pages returned a pass with 0 errors and 0 warnings.
+The HTML of the each page of the site was validated using [W3C Markup Validation Service](https://validator.w3.org/).  All pages returned a pass with 0 errors and 1 warning that came from cloudinary.
 
-
-
+<details><summary>HTML file</summary>
+<img src="readme/html_warning.png">
+</details>
 
 ### CSS Validation
 The [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/validator) was used to validate the CSS of the website. 
@@ -353,7 +354,7 @@ The [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/validator) w
 The custom CSS file for the site passed with 0 errors.
 
 <details><summary>Custom CSS file</summary>
-<img src="#">
+<img src="readme/css_score.png">
 </details>
 
 
@@ -361,7 +362,7 @@ The custom CSS file for the site passed with 0 errors.
 The Javascript of the each page of the site was validated using [JSHint validation tool](https://jshint.com/).  All pages returned a pass with 0 errors and 0 warnings.
 
 <details><summary>script.js</summary>
-<img src="#">
+<img src="readme/javascript_score.png">
 </details>
 
 
@@ -372,46 +373,57 @@ The Python of the each page of the site was validated using [Python validation t
 
 #### Admin py-validation
 
-<details><summary>#.py</summary>
-<img src="#">
+<details><summary>customer/admin.py</summary>
+<img src="readme/customer_admin_score.png">
 </details>
 
+<details><summary>takeaway/admin.py</summary>
+<img src="readme/takeaway_admin_score.png">
+</details>
 
 #### Forms py validation
 
-<details><summary>/forms.py</summary>
-<img src="#">
+<details><summary>customer/forms.py</summary>
+<img src="readme/customer_forms_score.png">
+</details>
+
+<details><summary>takeaway/forms.py</summary>
+<img src="readme/takeaway_forms_score.png">
 </details>
 
 
 #### Models py validation
 
-<details><summary>#models.py</summary>
-<img src="#">
+<details><summary>customer/models.py</summary>
+<img src="readme/customer_models_score.png">
+</details>
+
+<details><summary>takeaway/models.py</summary>
+<img src="readme/takeaway_admin_score.png">
 </details>
 
 
 #### Urls py validation
 
-<details><summary>#/urls.py</summary>
-<img src="#">
+<details><summary>customer/urls.py</summary>
+<img src="readme/customer_urls_score.png">
+</details>
+
+<details><summary>takeaway/urls.py</summary>
+<img src="readme/takeaway_urls_score.png">
 </details>
 
 
 #### Views py validation
 
-<details><summary>#/views.py</summary>
-<img src="#">
+<details><summary>customer/views.py</summary>
+<img src="readme/customer_views_score.png">
 </details>
 
-
-#### Urls py validation
-
-<details><summary>#/urls.py</summary>
-<img src="#">
+<details><summary>takeaway/views.py</summary>
+<img src="readme/takeaway_views_score.png">
 </details>
 
-</details>
 
 ### Accessibility
 The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was used to ensure the website met high accessibility standards. All pages returned 0 errors.
