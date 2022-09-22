@@ -550,19 +550,25 @@ The Python of the each page of the site was validated using [Python validation t
 The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was used to ensure the website met high accessibility standards. All pages returned 0 errors.
 
 <details><summary>Home</summary>
-<img src="#">
+<img src="readme/home_wave.png">
 </details>
 <details><summary>Menus</summary>
-<img src="#">
+<img src="readme/menu_waves.png">
+<img src="readme/menu_item_wave.png">
+<img src="readme/delete_review_wave.png">
+<img src="readme/edit_review_wave.png">
 </details>
 <details><summary>About</summary>
-<img src="#">
+<img src="readme/about_waves.png">
 </details>
 <details><summary>Order</summary>
-<img src="#">
+<img src="readme/ordernow_waves.png">
+<img src="readme/confirmation_waves.png">
 </details>
 <details><summary>Profile</summary>
-<img src="#">
+<img src="readme/signup_waves4.png">
+<img src="readme/login_waves.png">
+<img src="readme/update_profile_waves.png">
 </details>
 
 ### Performance 
@@ -589,18 +595,39 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was
 
 ### Testing user stories
 
-1. As a first time user, I want to be able to view the type of food the restaurant provides
+1. As a first time user, I want to be able to see menu and what I can order.
+
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|  Menu page   | Select any menu option from main nav bar           |     Menu page is displayed with images and information                | Works as expected |
-|      Menu page       |    Select menu item links        |    Menu page is displayed with images and information by category                 | Works as expected |
+|  Menu page   | Select any menu option from main nav bar           |     Menu page is displayed with information                | Works as expected |
+|     Home page link       |    Select nav item link on home page        |    Menu page is displayed with images and information by category                 | Works as expected |
 
 <details><summary>Images</summary>
-<img src="#">
-<img src="#">
+<img src="readme/home_test.png">
 </details>
 
+2. As a first time user, I want to be able to navigate site easily.
+
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  Nav bar page   | Select any option from main nav bar           |     Menu page is displayed with information                | Works as expected |
+|     Nav bar page       |    Select nav item links        |    Menu page is displayed with images and information by category                 | Works as expected |
+
+<details><summary>Images</summary>
+<img src="readme/home_test.png">
+</details>
+
+3. As a first time user, I want clear information on where the restaurant is located.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  Contact and Maps   | Navigate to any page           |     See contact and location is displayed with information                | Works as expected |
+
+<details><summary>Images</summary>
+<img src="readme/footer.png">
+</details>
 
 ## Bugs
 
@@ -611,7 +638,7 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was
 | Profile table - changed zip code from Integarfield to Charfield lead to value error | solved - delete table from database and run migrations. |
 | Profile Table - email set null = True caused integratiy error | solved - remove null value |
 | You can submit order with no items | solved - add custom jquery to check if checkformcontrol has checked item |
-| Order confirmation page doesn't have logged in user in Sign Up/Login in nav bar | solved -change context 'user' to 'oreder_user' |
+| Order confirmation page doesn't have logged in user in Sign Up/Login in nav bar | solved -change context 'user' to 'order_user' |
 | No alert for unchecked item | unresolved |
 
 
