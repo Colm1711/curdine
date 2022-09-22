@@ -2,109 +2,78 @@
 
 <!--Order page content-->
 {% block content %}
+
 <div class="p-5 container">
     <h1 class="mb-3">Order Now</h1>
-            <!-- Error message if no items selected trigger modal -->
-            <div class="alert alert-danger alert-danger fade show d-none text-center mt-2" role="alert">
-                <strong>Holy Cheese!</strong> You have not selected food item!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-    <form id="sectionForm" method="POST">
+    <form id="sectionForm" class="row g-3" method="POST">
         {% csrf_token %}
-        <div class="row row-cols-1 row-cols-md-3">
+        <div class="px-5">
             {% for item in items %}
-            <div class="col mb-4">
-                <div class="card m-4">
-                    {% if "placeholder" in item.food_image.url %}
-                    <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        class="card-img-top" alt="Carton of chips">
-                    {% else %}
-                    <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top rounded">
-                    {% endif %}
-                    <div class="card-body">
-                        <h2 class="card-title">{{ item }}</h2>
-                        <p class="card-text">&euro;{{ item.price }}</p>
-                        <div class="form-group form-check required">
-                            <label class="form-check-label" for="{{ item }}" id="checkLabel">{{ item }}</label>
-                            <input id="{{ item }}" type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required aria-labelledby="checkLabel">
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <img class="rounded" src="{{item.food_image.url}}" width="150" height="100" />
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="flex-row">
+                        <div class="form-group form-check options">
+                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required>
+                            <label class="form-check-label">{{ item }}</label>
                         </div>
                     </div>
+                    <p class="fw-bold mt-2">&euro;{{ item.price }}</p>
+                    <p>{{ item.description }}</p>
                 </div>
             </div>
+            <hr />
             {% endfor %}
         </div>
-        <div class="form-group pt-3">
-            <label for="name">Full Name</label>
-            <input minlength required class="form-control" id="name" type="text" name="name" value="{{ request.user.profile.name }}" />
+        <h2>Your Details</h2>
+        <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Full name</label>
+            <input type="text" class="form-control" id="validationDefault01" name="name"
+                value="{{ request.user.profile.name }}" required>
         </div>
-
-        <div class="form-group pt-3">
-            <label for="email">Email Address</label>
-            <input required class="form-control" id="email" type="text" name="email" value="{{ request.user.profile.email }}" />
-        </div>
-
-        <div class="form-group pt-3">
-            <label for="phone_number">Contact Number</label>
-            <input required aria-required="true" class="form-control" id="phone_number" type="text" name="phone_number" maxlength="10"
-                value="{{ request.user.profile.phone_number }}" />
-        </div>
-
-        <div class="form-group pt-3">
-            <label for="address1">Address 1</label>
-            <input required class="form-control" id="address1" type="text" name="address1"
-                value="{{ request.user.profile.address1 }}" />
-        </div>
-        <div class="form-group pt-3">
-            <label for="address2">Address 2</label>
-            <input required class="form-control" id="address2" type="text" name="address2"
-                value="{{ request.user.profile.address2 }}" />
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class="form-group pt-3">
-                    <label for="city">City</label>
-                    <input required class="form-control" id="city" type="text" name="city"
-                        value="{{ request.user.profile.city }}" />
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-12">
-                <div class="form-group pt-3">
-                    <label for="county">County</label>
-                    <input required class="form-control" id="county" type="text" name="county"
-                        value="{{ request.user.profile.county }}" />
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-12">
-                <div class="form-group pt-3">
-                    <label for="eir_code">Eir Code</label>
-                    <input required class="form-control" id="eir_code" type="text" name="eir_code"
-                        value="{{ request.user.profile.eir_code }}" />
-                </div>
+        <div class="col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="email" name="email" value="{{ request.user.profile.email }}"
+                    required>
             </div>
         </div>
+        <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Contact Phone Number</label>
+            <input type="text" class="form-control" id="validationDefault02" name="phone_number"
+                value="{{ request.user.profile.phone_number }}" maxlength="10" required>
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Address 1</label>
+            <input type="text" class="form-control" id="validationDefault03" name="address1"
+                value="{{ request.user.profile.address1 }}" required>
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Address 2</label>
+            <input type="text" class="form-control" id="validationDefault03" name="address2"
+                value="{{ request.user.profile.address2 }}" required>
+        </div>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary mt-5" onClick="valthis();">
-            Submit Order
-        </button>
+        <div class="col-md-4">
+            <label for="validationDefault05" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationDefault05" name="city"
+                value="{{ request.user.profile.city }}" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault05" class="form-label">County</label>
+            <input type="text" class="form-control" id="validationDefault05" name="county"
+                value="{{ request.user.profile.county }}" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault05" class="form-label">Eir Code</label>
+            <input type="text" class="form-control" id="validationDefault05" name="eir_code"
+                value="{{ request.user.profile.eir_code }}" required>
+        </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Submit My Order</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back to
-                            Order</button>
-                        <button onclick="form_submit()"  class="btn btn-primary" type="submit">Place Order!</button>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
         </div>
     </form>
 </div>
