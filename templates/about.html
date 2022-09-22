@@ -4,6 +4,34 @@
 {% block content %}
 <div class="container p-5">
     <h1>About Us</h1>
+    <!--About Us Images-->
+    <div id="carouselAboutIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselAboutIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselAboutIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselAboutIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/images/spuds.jpg" class="d-block w-100 rounded" alt="uncooked french fries">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/cooking.jpeg" class="d-block w-100 rounded" alt="cooking french fries">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/seasoning.jpg" class="d-block w-100 rounded" alt="seasoning french fries">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAboutIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselAboutIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!--About Me text-->
     <div class="container">
         <p class="lead pb-5">
             {% for desc in about_text_body %}
