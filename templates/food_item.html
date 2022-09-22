@@ -45,7 +45,7 @@
               {{ review.creation_date }}
             </span> wrote:
             <!-- The body of the review goes before the | -->
-            <span class="fst-italic mt-5">{{ review.body | linebreaks }}</span>
+            <div class="fst-italic mt-5">{{ review.body | linebreaks }}</div>
             {% if review.name == user.username %}
             <a href="{% url 'review_confirm_delete' review.id %}"><i class="bi bi-trash-fill"></i></a>
             <a href="{% url 'update_review' review.id %}"><i class="bi bi-pencil-square"></i></a>
@@ -82,7 +82,7 @@
           </div>
           {% endif %}
           {% endif %}
-        </div>
+
       </div>
     </div>
   </div>
