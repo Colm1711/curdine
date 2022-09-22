@@ -11,13 +11,13 @@
             {% for item in items %}
             <div class="row">
                 <div class="col-md-2 col-sm-12">
-                    <img class="rounded" src="{{item.food_image.url}}" width="150" height="100" />
+                    <img class="rounded" src="{{item.food_image.url}}" width="150" height="125" alt="Picture for food item {{ item }}"/>
                 </div>
                 <div class="col-md-8 col-sm-12">
                     <div class="flex-row">
                         <div class="form-group form-check options">
-                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required>
-                            <label class="form-check-label">{{ item }}</label>
+                            <input id="{{item}}" type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}" required>
+                            <label class="form-check-label" for="{{item}}">{{ item }}</label>
                         </div>
                     </div>
                     <p class="fw-bold mt-2">&euro;{{ item.price }}</p>
@@ -29,46 +29,46 @@
         </div>
         <h2>Your Details</h2>
         <div class="col-md-4">
-            <label for="validationDefault01" class="form-label">Full name</label>
-            <input type="text" class="form-control" id="validationDefault01" name="name"
+            <label id="name_label" for="name" class="form-label">Full name</label>
+            <input type="text" class="form-control" aria-labelledby="name_label" id="name" name="name"
                 value="{{ request.user.profile.name }}" required>
         </div>
         <div class="col-md-4">
-            <label for="email" class="form-label">Email</label>
+            <label id="email_label" for="email" class="form-label">Email</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="email" name="email" value="{{ request.user.profile.email }}"
+                <input type="text" class="form-control" aria-labelledby="email_label" id="email" name="email" value="{{ request.user.profile.email }}"
                     required>
             </div>
         </div>
         <div class="col-md-4">
-            <label for="validationDefault02" class="form-label">Contact Phone Number</label>
-            <input type="text" class="form-control" id="validationDefault02" name="phone_number"
+            <label id="phone_label" for="validationDefault02" class="form-label">Contact Phone Number</label>
+            <input type="text" class="form-control" aria-labelledby="phone_label" id="validationDefault02" name="phone_number"
                 value="{{ request.user.profile.phone_number }}" maxlength="10" required>
         </div>
         <div class="col-md-6">
-            <label for="validationDefault03" class="form-label">Address 1</label>
-            <input type="text" class="form-control" id="validationDefault03" name="address1"
+            <label id="label1" for="validationDefault03" class="form-label">Address 1</label>
+            <input type="text" class="form-control" aria-labelledby="label1"  id="validationDefault03" name="address1"
                 value="{{ request.user.profile.address1 }}" required>
         </div>
         <div class="col-md-6">
-            <label for="validationDefault03" class="form-label">Address 2</label>
-            <input type="text" class="form-control" id="validationDefault03" name="address2"
+            <label id="label2" for="validationDefault04" class="form-label">Address 2</label>
+            <input type="text" class="form-control" aria-labelledby="label2" id="validationDefault04" name="address2"
                 value="{{ request.user.profile.address2 }}" required>
         </div>
 
         <div class="col-md-4">
-            <label for="validationDefault05" class="form-label">City</label>
-            <input type="text" class="form-control" id="validationDefault05" name="city"
+            <label id="labelCity" for="validationDefault05" class="form-label">City</label>
+            <input type="text" class="form-control" aria-labelledby="labelCity" id="validationDefault05" name="city"
                 value="{{ request.user.profile.city }}" required>
         </div>
         <div class="col-md-4">
-            <label for="validationDefault05" class="form-label">County</label>
-            <input type="text" class="form-control" id="validationDefault05" name="county"
+            <label id="labelCounty" for="validationDefault06" class="form-label">County</label>
+            <input type="text" class="form-control" aria-labelledby="labelCounty" id="validationDefault06" name="county"
                 value="{{ request.user.profile.county }}" required>
         </div>
         <div class="col-md-4">
-            <label for="validationDefault05" class="form-label">Eir Code</label>
-            <input type="text" class="form-control" id="validationDefault05" name="eir_code"
+            <label id="labelEir" for="validationDefault07" class="form-label">Eir Code</label>
+            <input type="text" class="form-control" aria-labelledby="labelEir" id="validationDefault07" name="eir_code"
                 value="{{ request.user.profile.eir_code }}" required>
         </div>
 
