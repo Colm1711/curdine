@@ -33,11 +33,18 @@ footer {
     }
 }
 
+/* Food Item Image*/
+img#food-item-image{
+  width: 60%;
+}
+
+
 /* Food Item Review */
 .bi-trash-fill {
     color: red;
 }
 
+/*Site pagination button on Menu page*/
 .paginationbtn{
   background-color: #C8E6AC;
   color: black;
