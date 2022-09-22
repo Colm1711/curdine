@@ -7,9 +7,8 @@
    1. [Structure](#structure)
         1. [Website pages](#website-pages)
         2. [Code Structure](#code-structure)
-        3. [Database](#database)
-        4. [Physical database model](#physical-database-model)
-        5. [Models](#models)
+        3. [Physical database model](#physical-database-model)
+        4. [Models](#models)
             1. [User Model](#user-model)
             2. [Profile Model](#profile-model)
             3. [Food_item Model](#food_item-model)
@@ -471,7 +470,7 @@ The custom CSS file for the site passed with 0 errors.
 
 
 ### JS Validation
-The Javascript of the each page of the site was validated using [JSHint validation tool](https://jshint.com/).  All pages returned a pass with 0 errors and 0 warnings.
+The Javascript of the each page of the site was validated using [JSHint validation tool](https://jshint.com/).  All pages returned a pass with 0 errors and 0 warnings. Unused vars are from boostrap & google documentation. The dollar signs are Jquery query selectors.
 
 <details><summary>script.js</summary>
 <img src="readme/javascript_score.png">
@@ -481,7 +480,7 @@ The Javascript of the each page of the site was validated using [JSHint validati
 ### Py Validation
 The Python of the each page of the site was validated using [Python validation tool](http://pep8online.com/).  All pages returned a pass with 0 errors and 0 warnings.
 
-<details><summary>Details</summary>
+<summary>Details</summary>
 
 #### Admin py-validation
 
@@ -514,8 +513,18 @@ The Python of the each page of the site was validated using [Python validation t
 <img src="readme/takeaway_admin_score.png">
 </details>
 
+#### Settings py validation
+
+<details><summary>customer/settings.py</summary>
+<img src="readme/curdine_settings_score.png">
+</details>
+
 
 #### Urls py validation
+
+<details><summary>curdine/urls.py</summary>
+<img src="readme/customer_urls_score.png">
+</details>
 
 <details><summary>customer/urls.py</summary>
 <img src="readme/customer_urls_score.png">
@@ -537,7 +546,7 @@ The Python of the each page of the site was validated using [Python validation t
 </details>
 
 
-### Accessibility
+#### Accessibility
 The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was used to ensure the website met high accessibility standards. All pages returned 0 errors.
 
 <details><summary>Home</summary>
