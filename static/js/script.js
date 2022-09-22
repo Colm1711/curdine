@@ -23,27 +23,17 @@ function initMap() {
     });
 }
 
-/*  Function for Order form to validate if item is not selected raise an alert 
-    Opens Modal if successful.
+/*  Function for Order form to validate if item is not selected raise an alert.
 */
-function valthis() {
-    var checkBoxes = document.getElementsByClassName( 'form-check-input');
-    var isChecked = false;
-    
-    
-        for (var i = 0; i < checkBoxes.length; i++) {
-            if ( checkBoxes[i].checked ) {
-                isChecked = true;
-            };
-        };
-        if ( isChecked ) {
-            $("#exampleModal").modal('show');
-            } else {
-                $('.alert').removeClass('d-none').addClass('show');
-            }   
-    }
+$(function(){
+    var requiredCheckboxes = $('.options :checkbox[required]');
+    requiredCheckboxes.change(function(){
+        if(requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+        }
+    });
+});
 
-/* Submits Order form in Modal */    
-function form_submit() {
-        document.getElementById("sectionForm").submit();
-       }    
+
