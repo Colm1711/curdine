@@ -4,20 +4,21 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <div class="container py-4">
-  <div class="p-md-5 mt-4 mb-4 bg-light rounded-3">
+  <div class="p-md-3 mt-4 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
       <!--Food Item Name-->
       <h1 class="display-5 fw-bold">{{ item }}</h1>
       <!--Food Item Picture-->
-      <div class="image-container">
-      {% if "placeholder" in food_item.food_image.url %}
-      <img
-        src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Image of the food item" class="card-img rounded">
-      {% else %}
-      <img src="{{item.food_image.url}}" alt="Image of the food item" class="card-image-top img-fluid w-100 rounded">
-      {% endif %}
-    </div>
+      <div class="image-container text-center">
+        {% if "placeholder" in food_item.food_image.url %}
+        <img
+          src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Image of the food item" class="card-img rounded">
+        {% else %}
+        <img src="{{item.food_image.url}}" alt="Image of the food item" id="food-item-image"
+          class="card-image-top rounded">
+        {% endif %}
+      </div>
     </div>
   </div>
   <!--Food Item Description-->
@@ -37,14 +38,14 @@
           <div class="border border-1 border-dark m-3 p-2 rounded">
             <!-- The reviewer's name goes here. Check the model if you're not sure what that is -->
             <span class="fw-bold">
-            {{ review.name }}
+              {{ review.name }}
             </span>
             <span class=" text-muted font-weight-normal">
               <!-- The review's created date goes here -->
               {{ review.creation_date }}
             </span> wrote:
             <!-- The body of the review goes before the | -->
-            <span class="fst-italic mt-5">{{ review.body | linebreaks }}</span>   
+            <span class="fst-italic mt-5">{{ review.body | linebreaks }}</span>
             {% if review.name == user.username %}
             <a href="{% url 'review_confirm_delete' review.id %}"><i class="bi bi-trash-fill"></i></a>
             <a href="{% url 'update_review' review.id %}"><i class="bi bi-pencil-square"></i></a>
