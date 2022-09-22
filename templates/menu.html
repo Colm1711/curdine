@@ -3,31 +3,33 @@
 <!--menu content-->
 {% block content %}
 <div class="container p-5">
-    <h1 class="mb-3">Menu</h1>
-        <div class="col-12 mt-3">
-            <div class="row row-cols-1 row-cols-md-3">
-                {% for food_item in food_item_list%}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                            <a class="text-decoration-none text-dark" href="{% url 'food_item' food_item.slug %}">
-                                {% if "placeholder" in food_item.food_image.url %}
-                                <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image of the food item" class="card-img-top img-fluid">
-                                {% else %}
-                                <img src="{{food_item.food_image.url}}" alt="Image of the food item" class="card-image-top w-100 rounded">
-                                {% endif %}
-                            <div class="card-body">
-                                <h2 class="card-title">{{ food_item }}</h2>
-                            </a>
-                                <p class="card-text">{{ food_item.description }}</p>
-                                <p class="card-text">&euro;{{ food_item.price }}</p>
-                            </div>
-                    </div>
+    <h1 class="mb-3">Menu</h1> 
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            {% for food_item in food_item_list%}
+            <div class="col">
+              <div class="card h-100">
+                <a class="text-decoration-none text-dark" href="{% url 'food_item' food_item.slug %}">
+                    {% if "placeholder" in food_item.food_image.url %}
+                    <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image of the food item" class="card-img-top">
+                    {% else %}
+                    <img src="{{food_item.food_image.url}}" alt="Image of the food item" class="card-img-top">
+                    {% endif %}
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">{{ food_item }}</h5>
+                  <p class="card-text">{{ food_item.description }}</p>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+                <div class="card-footer">
+                  <small class="text-muted">&euro;{{ food_item.price }}</small>
+                </div>
+              </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
             {% endif %}
             {% endfor %}
-            </div>
-        </div>
+          </div>
+          
+    <!--Pagination Controls-->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination pagination-lg justify-content-center">
