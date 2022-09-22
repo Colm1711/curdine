@@ -559,14 +559,22 @@ By forking this GitHub repository you are making a copy of the original to view 
 
 ## Credits
 
-*All credit also included in the page files.*
+1. Legion Script for inspiration on order page - (https://www.youtube.com/watch?v=TXv2lbbhsOc)
+2. Django community - (https://django.fun/qa/328691/)
+3. Slack Community - (https://stackoverflow.com/questions/58452648/how-to-reference-a-slug-from-a-different-model-in-get-success-url)
+4. CI Tutor Support
+5. Matt Rodgers CI for content inspiration from lessons.
+6. W3Schools - (https://www.w3schools.com/)
+7. iStock - (https://www.istockphoto.com/search/2/image?phrase=poutine)
+8. Boostrap community - (https://getbootstrap.com/docs/5.0/)
+
 
 ### Media
 
 Media from the following artists was used throughout the site.
 
 - [Pexels](https://www.pexels.com/)
-- [Shutterstock](https://www.shutterstock.com/discover/stock-assets-uk-0220?kw=free%20images&c3apidt=p44044564070&gclid=CjwKCAjwloCSBhAeEiwA3hVo_aWCMHb_myvjFHu9hDOK2H8NkLvJ2OUMurc0or0G-aCEET7y-l4RdhoCnyQQAvD_BwE&gclsrc=aw.ds)
+- [iStock](https://www.istockphoto.com/search/2/image?phrase=poutine)
 - [Postgress-Deployment](https://github.com/pmeeny/CI-MS4-LoveRugby#deployment)
 - Code for comments adapted from Code Institute Django blog
 
