@@ -92,3 +92,8 @@ img#food-item-image{
     opacity: 1;
     right: 10px;
   }
+
+/* */
+.carousel-item{
+  width: 100%;
+}
