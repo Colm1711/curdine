@@ -12,7 +12,7 @@
                     {% if "placeholder" in food_item.food_image.url %}
                     <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image of the food item" class="card-img-top">
                     {% else %}
-                    <img src="{{food_item.food_image.url}}" alt="Image of the food item" class="card-img-top">
+                    <img src="{{food_item.food_image.url}}" alt="Image of the food item" class="card-img-top img-fluid">
                     {% endif %}
                 </a>
                 <div class="card-body">
