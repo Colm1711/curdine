@@ -94,7 +94,7 @@
 
 #### Overview
 
-Article from above is from 2021. The listed most popular takeaway by Irish people during lockdown was chippers and after chips the most ordered item was sauce. My brother is heading away soon to begin his adventure in Canada in honour of him and his help for this project it lead me to pay homage by picking the most popular dish there Poutine, which is a delicacy
+Article from above is from 2021. The listed most popular takeaway by Irish people during lockdown was chippers and after chips the most ordered item was sauce. My brother is heading away soon to begin his adventure in Canada in honour of him and his help for this project it lead me to pay homage by picking the most popular dish there Poutine, which is a delicacy of chips, gravy and cheese curds. This site is target at offering user the capability of ordering poutine online from Curdine takeaway service.
 
 
 ## Structure
@@ -121,7 +121,7 @@ Note: Environment variable values are not exposed in the source code, they are s
 #### Physical database model
 
 This model contains all fields stored in the database collections with their data type and mimics the structure of what is actually stored in the Postgres database 
-<br>![Database model]()
+<br>![Database model](readme/models.png)
 
 #### Models
 - The following models were created to represent the database model structure for the website
@@ -208,48 +208,50 @@ This model contains all fields stored in the database collections with their dat
 ### Wireframes
 
 <details><summary>Home</summary>
-<img src="#">
+<img src="readme/home.png">
+<img src="readme/Home_mobile.png">
 </details>
 
 <details><summary>About</summary>
-<img src="#">
+<img src="readme/about.png">
+<img src="readme/about_mobile.png">
 </details>
 
 <details><summary>Menus</summary>
-<img src="#">
+<img src="readme/menu.png">
+<img src="readme/menu_mobile.png">
 </details>
 
 <details><summary>Update Profile</summary>
-<img src="#">
+<img src="readme/signup.png">
+<img src="readme/signup_mobile.png">
 </details>
 
 <details><summary>Order</summary>
-<img src="#">
+<img src="readme/order.png">
+<img src="readme/order_mobile_mobile.png">
 </details>
 
 <details><summary>Order Confirmation</summary>
-<img src="#">
+<img src="order_confirmation/home.png">
+<img src="readme/order_confirmation_mobile.png">
 </details>
 
 <details><summary>Food Item Details</summary>
-<img src="#">
+<img src="readme/food_item.png">
+<img src="readme/food_item_mobile.png">
 </details>
 
-<details><summary>Sign In</summary>
-<img src="#">
+<details><summary>Login In</summary>
+<img src="readme/login.png">
+<img src="readme/login_mobile.png">
 </details>
 
 <details><summary>Sign Up</summary>
-<img src="#">
+<img src="readme/signup.png">
+<img src="readme/signup_mobile.png">
 </details>
 
-<details><summary>Logout</summary>
-<img src="#">
-</details>
-
-<details><summary>Errors</summary>
-<img src="#">
-</details>
 
 ## Surface
 ### Design choices
@@ -262,14 +264,19 @@ The background is neutral but bright, the images are not the focal point of the 
 
 ### Colours
 
-The colour palette is 
+The colour palette is:
 
-After choosing a colour scheme I tested a number of palette options to make sure the it met accessibility standards.
+ - #C8E6AC
+ - #FFFFFF
+ - text-white
 
-<br>![Database model](#)
+After choosing a colour scheme I tested a number of palette options to make sure the it met accessibility standards. Idea was to keep it clean & simple with focus on readability.
+
+<br>![Accessibility](readme/contrast.png)
 
 ### Typography
 
+Montserrat was choosen as the sites font as it is great for creating a simple and clean-looking web design. The font has nine styles from thin to black with a true italic to each. As a sans serif typeface, Montserrat has high readability.
 
 ## Features
 
@@ -502,29 +509,26 @@ Heroku Postgres
 
 10. Run "python3 manage.py createsuperuser" to create a super/admin user
 
-11. Run "python3 manage.py loaddata categories.json" on the categories file in products/fixtures to create the categories
+11. Install gunicorn and add it to the requirements.txt file using the command pip3 freeze > requirements.txt
 
-12. Run "python3 manage.py loaddata products.json" on the products file in products/fixtures to create the products
+12. From the CLI login to Heroku using the command heroku git:remote -a ci-ms4-elginisrestaurant
 
-13. Install gunicorn and add it to the requirements.txt file using the command pip3 freeze > requirements.txt
+13. Disable collectstatic in Heroku before any code is pushed using the command heroku config:set DISABLE_COLLECTSTATIC=1 -a ci-ms4-elginisrestaurant
 
-14. From the CLI login to Heroku using the command heroku git:remote -a ci-ms4-elginisrestaurant
+14. Push the code to Heroku using the command git push heroku master
 
-15. Disable collectstatic in Heroku before any code is pushed using the command heroku config:set DISABLE_COLLECTSTATIC=1 -a ci-ms4-elginisrestaurant
+15. Ensure the following environment variables are set in Heroku
 
-16. Push the code to Heroku using the command git push heroku master
+16. Heroku Env variables
 
-17. Ensure the following environment variables are set in Heroku
-18. Heroku Env variables
-
-19. Connect the app to GitHub, and enable automatic deploys from main
+17. Connect the app to GitHub, and enable automatic deploys from main
 Heroku Postgres
 
-20. Click deploy to deploy your application to Heroku for the first time
+18. Click deploy to deploy your application to Heroku for the first time
 
-21. Click on the link provided to access the application
+19. Click on the link provided to access the application
 
-22. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
+20. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
 
 ### Forking the GitHub Repository 
@@ -561,7 +565,7 @@ Media from the following artists was used throughout the site.
 
 ### Acknowledgements: 
 
-- To my girlfriend Ewelina Wolska and my brother Fintan for testing, support, feedback, permissions for content and images on this project. 
+- To my girlfriend Ewelina Wolska,my brother Fintan and family for testing, support, feedback, permissions for content and images on this project. 
 - To my mentor Mo Shami for his invaluable guidance and direction.
 - To the Code Institute slack community of students.
 - To the Code Institute Tutors
