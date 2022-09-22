@@ -267,7 +267,7 @@ The background is neutral but bright, the images are not the focal point of the 
 The colour palette is:
 
  - #C8E6AC
- - #FFFFFF
+ - #000000
  - text-white
 
 After choosing a colour scheme I tested a number of palette options to make sure the it met accessibility standards. Idea was to keep it clean & simple with focus on readability.
@@ -305,6 +305,7 @@ The site contains 11 pages and
 - [JS ES6](https://en.wikipedia.org/wiki/JavaScript)
 - [Django](https://www.djangoproject.com/)
 - [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [jQuery](https://jquery.com/)
 
 #### Python Libraries
 
@@ -326,21 +327,17 @@ sqlparse==0.4.2
 - [Bootstrap 5.0](https://getbootstrap.com/docs/5.0) - for general site layout, grid, flex, carousel.
 - [Postgres](https://www.postgresql.org/) - the site is deployed on Heroku using a Postgress database.
 - [SQLLite](https://www.sqlite.org/index.html) - this database was used in local development.
-- [VSCode](https://code.visualstudio.com/) - my IDE of choice for this project.
 - [Gitpod](https://gitpod.io/) - used occasionally for tutor support.
 - [Github](https://github.com/) - used as the code repository.
-- [Google Fonts](https://fonts.google.com/) - used for the main body font and some headings.
-- [Balsamiq](https://balsamiq.com/) -  used to create the website wireframes.
-- [Font Awesome](https://fontawesome.com/) - Font awesome was used to provide the relevant fonts/icons for the website social media icon links.
+- [Wireframepro](wireframepro.mockflow.com) -  used to create the website wireframes.
+media icon links.
 - [JQuery](https://jquery.com) - JQuery was used in some javascript files for DOM manipulation
 - [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - for validation of the css in the project.
 - [HTML Markup Validation Service](https://validator.w3.org/) - for validation the HTML in the project.
 - [Firefox dev tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) - troubleshooting and debugging of the project code.
 - [Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) - for performance, accessibility, progressive web apps, SEO analysis of the project code.
-- [Responsive Design](http://ami.responsivedesign.is/) - for website mockup.
 - [JSHint](https://jshint.com/) - for javascript validation.
 - [PEP8](https://www.python.org/dev/peps/pep-0008/) - for python validation.
-- [Quick Database diagrams](https://www.quickdatabasediagrams.com)- for the database schema diagram.
 
 ## Validation
 
@@ -439,20 +436,22 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was
 [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) was used to measure the performance and speed of the website -performance, accessibility, best practice and SEO with results below:
 
 <details><summary>Home</summary>
-<img src="#">
+<img src="readme/home_score.png">
 </details>
 <details><summary>Menu</summary>
-<img src="#">
-
+<img src="readme/menu_score.png">
 </details>
 <details><summary>About</summary>
-<img src="#">
+<img src="readme/about_score.png">
 </details>
 <details><summary>Order</summary>
-<img src="#">
+<img src="readme/order_score.png">
 </details>
-<details><summary>Profile</summary>
-<img src="#">
+<details><summary>Log In</summary>
+<img src="readme/login_score.png">
+</details>
+<details><summary>Sign Up</summary>
+<img src="readme/signup_score.png">
 </details>
 
 ### Testing user stories
