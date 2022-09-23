@@ -935,8 +935,8 @@ The website was tested on the following devices:
 | You can submit order with no items | solved - add custom jquery to check if checkformcontrol has checked item |
 | Order confirmation page doesn't have logged in user in Sign Up/Login in nav bar | solved -change context 'user' to 'order_user' |
 | Google maps location icon is causing waves error for capability due ot labeling, google maps does not off by default solution requires complicated javascript code | unresolved |
-| No alert for unchecked item | unresolved |
-| No alert for Logging in | unresolved |
+| No alert for unchecked items, redirects user to problem without prompt | unresolved |
+| No alert for Logging in, only form of user alert not functioning | unresolved |
 | No validation on the information filled out in user form | unresolved |
 
 
