@@ -43,7 +43,22 @@
 12. [Acknowledgements](#acknowledgements)
 
 ## Project Goals
-*Placeholder
+
+The Primary goal of this website from the owners perspectice is as follows:
+
+* To view the takeaways menu
+* To see details of the food items such as price, pictures, descriptions and reviews
+* To be able to leave reviews
+* Sign up to be a registered user
+* Change their details and delete their account
+* See what the businesses ethos is
+* See where the takeaway is located
+
+The Primary goal of this website from the owners perspectice is as follows:
+
+* To attract customers to the business by showing eaily navigate site that can take orders eaily
+* See food options and reviews that other users have left
+* Allow users to place orders
 
 
 ## User Experience (UX)
