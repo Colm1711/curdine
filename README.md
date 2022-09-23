@@ -419,9 +419,13 @@ This feature covers the following user stories:
 
 ### Page 6 - Sign In/ Log In and Update Profile
 <br>![Register model](readme/register.png)
+
 <br>![Login model](readme/login_dets.png)
+
 <br>![Update model](readme/update_profile.png)
+
 <br>![Delete model](readme/update_delete_profile.png)
+
 These features covers the following user stories:
 
 8.	As a logged in user, I want to be able to be able to leave reviews
@@ -447,18 +451,18 @@ These features covers the following user stories:
 
 #### Python Libraries
 
-asgiref==3.5.2
-cloudinary==1.29.0
-crispy-bootstrap5==0.6
-dj-database-url==1.0.0
-dj3-cloudinary-storage==0.0.6
-Django==3.2.15
-django-crispy-forms==1.14.0
-django-summernote==0.8.20.0
-gunicorn==20.1.0
-psycopg2==2.9.3
-pytz==2022.2.1
-sqlparse==0.4.2
+* asgiref==3.5.2
+* cloudinary==1.29.0
+* crispy-bootstrap5==0.6
+* dj-database-url==1.0.0
+* dj3-cloudinary-storage==0.0.6
+* Django==3.2.15
+* django-crispy-forms==1.14.0
+* django-summernote==0.8.20.0
+* gunicorn==20.1.0
+* psycopg2==2.9.3
+* pytz==2022.2.1
+* sqlparse==0.4.2
 
 
 ### Frameworks & Tools
@@ -497,7 +501,7 @@ The custom CSS file for the site passed with 0 errors.
 
 
 ### JS Validation
-The Javascript of the each page of the site was validated using [JSHint validation tool](https://jshint.com/).  All pages returned a pass with 0 errors and 0 warnings. Unused vars are from boostrap & google documentation. The dollar signs are Jquery query selectors.
+The Javascript of the each page of the site was validated using [JSHint validation tool](https://jshint.com/).  All pages returned a pass with 0 errors and 2 warnings. Unused vars are from boostrap & google documentation. The dollar signs are Jquery query selectors.
 
 <details><summary>script.js</summary>
 <img src="readme/javascript_score.png">
