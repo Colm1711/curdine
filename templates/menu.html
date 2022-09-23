@@ -18,6 +18,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ food_item }}</h5>
                   <p class="card-text">{{ food_item.description }}</p>
+                  <a class="btn paginationbtn" href="{% url 'order' %}">Order Now!</a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&euro;{{ food_item.price }}</small>
