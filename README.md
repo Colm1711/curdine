@@ -597,6 +597,24 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <img src="readme/signup_score.png">
 </details>
 
+
+## Performing tests on various devices
+
+The website was tested using Google Chrome Developer Tools Toggle Device Toolbar to simulate viewports of different devices.
+
+The website was tested on the following devices:
+- iPhone 7 (iphone screen)
+- Oneplus Nord (Android screen)
+- Asus (Laptop screen)
+
+### Browser compatibility
+
+- Testing has been carried out on the following browsers:
+  - Googe Chrome Version 101.0.4951.41 (Official Build) (64-bit)
+  - Firefox Browser 99.0.1 (64-bit)
+  - Safari (64-bit)
+  - Microsoft Edge Version 101.0.1210.32 (Official build) (64-bit)
+
 ### Testing user stories
 
 1. As a first time user, I want to be able to see menu and what I can order.
@@ -607,12 +625,12 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 |  Menu page   | Select any menu option from main nav bar           |     Menu page is displayed with information                | Works as expected |
-|     Home page link       |    Select nav item link on home page        |    Menu page is displayed with images and information by category                 | Works as expected |
+|     Menu page      |    Select nav item link on home page        |    Menu page is displayed with images and information by category                 | Works as expected |
 
 <details><summary>Images</summary>
 <img src="readme/home_test.png">
 </details>
-
+<hr>
 2. As a first time user, I want to be able to navigate site easily.
 29.	As a site owner, I want users to be able to navigate the site easily and quickly
 
@@ -624,7 +642,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/home_test.png">
 </details>
-
+<hr>
 3. As a first time user, I want clear information on where the restaurant is located.
 24.	As a site owner, I want users to be able to see location of business
 
@@ -635,7 +653,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/footer.png">
 </details>
-
+<hr>
 4.	As a first time user, I want to be able to order food online
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -645,7 +663,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/order_val.png">
 </details>
-
+<hr>
 5.	As a first time user, I want to view reviews so that I know what others thought of previous orders
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -657,7 +675,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/review_val.png">
 </details>
-
+<hr>
 6.	As a first time user, I want to view About me page so that I know more about the company and it’s ethos
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -667,7 +685,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/about_val.png">
 </details>
-
+<hr>
 7.	As a first time user I want to be able to see other user’s comments and reviews
 26.	As a site owner, I want users to be able to view other comments and reviews
 
@@ -679,7 +697,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/review_val.png">
 </details>
-
+<hr>
 8.	As a logged in user, I want to be able to be able to leave reviews
 25.	As a site owner, I want users to be able to leave a comment or review
 
@@ -692,7 +710,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/leave_review_val.png">
 </details>
-
+<hr>
 9.	As a first time user, I want to be able to delete my review
 27.	As a site owner, I want users to be able to edit and delete comments or reviews
 
@@ -705,7 +723,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/delete_review_val.png">
 </details>
-
+<hr>
 10.	As a first time user, I want to see confirmation page of my order so that I know how much it will cost and they have my correct details
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -715,7 +733,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/order_val.png">
 </details>
-
+<hr>
 11.	As a first time user, I want to be able to know my order has been accepted
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -726,7 +744,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/order_val.png">
 </details>
-
+<hr>
 12.	As a first time user, I want to know about the business and it’s ethos
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -736,7 +754,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/about_val.png">
 </details>
-
+<hr>
 13. As a logged in user, I want to be able to update my profile
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -748,7 +766,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/update_profile_val.png">
 </details>
-
+<hr>
 
 14. As a first in user, I want to be able to to sign in to or create an account
 30. As a site owner, I want users to be able to sign in to, or create an account
@@ -762,7 +780,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/signup_val.png">
 </details>
-
+<hr>
 
 15. As a logged in user, I want to be able to log out of an account
 31. As a site owner, I want users to be able to log out of their account
@@ -774,7 +792,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/logout_val.png">
 </details>
-
+<hr>
 16. As a first time user, I want to see confirmation page of my order so that I know how much it will cost and they have my correct details
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -785,7 +803,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/order_val.png">
 </details>
-
+<hr>
 18. As a logged in user, I want to be able to delete my profile
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -797,7 +815,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/delete_profile_val.png">
 </details>
-
+<hr>
 20.	As a site owner, I want to be able to Approve reviews
 23.	As a site owner, I want to Manage reviews
 
@@ -812,7 +830,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/approve_review.png">
 </details>
-
+<hr>
 22.	As a site owner, I want users to be able to view the food descriptions and prices
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -824,7 +842,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/admin_food_item_val.png">
 </details>
-
+<hr>
 23.	As a site owner, I want to Manage reviews
 33. As a logged in administrator, I want to be able to review and approve or delete user reviews.
 
@@ -837,8 +855,10 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/admin_delete_review.png">
 </details>
+<hr>
 
 27.	As a site owner, I want users to be able to edit and delete comments or reviews
+
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 |  Food Item page   | User edits review          |     Review goes for approval                | Works as expected |
@@ -849,7 +869,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/approve_review.png">
 </details>
-
+<hr>
 
 28.	As a site owner, I want users to be able to find out about our business ethos
 35. As a logged in administrator, I want to be able to create, edit or remove content on the website.
@@ -863,7 +883,7 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/admin_about.png">
 </details>
-
+<hr>
 34. As a site owner, I want users to be able to view the business’ social media
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -874,20 +894,22 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 <details><summary>Images</summary>
 <img src="readme/footer.png">
 </details>
-
-
+<hr>
 
 ## Bugs
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-|  Installed incorrect django version | solved - pip3 install 'django<4' gunicorn |
+| Installed incorrect django version | solved - pip3 install 'django<4' gunicorn |
 | ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects | solved - create runtime.txt & vers 9(python-3.9.13) |
 | Profile table - changed zip code from Integarfield to Charfield lead to value error | solved - delete table from database and run migrations. |
 | Profile Table - email set null = True caused integratiy error | solved - remove null value |
 | You can submit order with no items | solved - add custom jquery to check if checkformcontrol has checked item |
 | Order confirmation page doesn't have logged in user in Sign Up/Login in nav bar | solved -change context 'user' to 'order_user' |
+| Google maps location icon is causing waves error for capability due ot labeling, google maps does not off by default solution requires complicated javascript code | unresolved |
 | No alert for unchecked item | unresolved |
+| No alert for Logging in | unresolved |
+| No validation on the information filled out in user form | unresolved |
 
 
 
@@ -898,70 +920,163 @@ By defualt google maps doesn't provide labeling for it's api. To notify user to 
 This application has been deployed from Github using Heroku. Here's how:
 
 1. Create an account at heroku.com
-2. Create an app, give it a name for example ci-ms4-elginis_restaurant, and select a region
-3. Under resources search for postgres, and add a Postgres database to the app
+<details><summary>Images</summary>
+<img src="readme/heroku_sign_up.png">
+</details>
 
-Heroku Postgres
+2. Create an app, give it a name for example curdine, and select a region(Europe)
+<details><summary>Images</summary>
+<img src="readme/create_app.png">
+</details>
+
+3. Under resources search for postgres, and add a Postgres database to the app
+<details><summary>Images</summary>
+<img src="readme/heroku_postgres.png">
+</details>
+<hr>
+Create App and Heroku Vars
 
 1. Note the DATABASE_URL, this can be set as an environment variable in Heroku and your local deployment(env.py)
+<details><summary>Images</summary>
+<img src="readme/env.png">
+</details>
 
-2. Install the plugins dj-database-url and psycopg2-binary.
+2. Install the plugins Django gunicorn and psycopg2-binary.
+<details><summary>Images</summary>
+<img src="readme/install_django.png">
+</details>
 
 3. Run pip3 freeze > requirements.txt so both are added to the requirements.txt file
+<details><summary>Images</summary>
+<img src="readme/pip_freeze.png">
+</details>
 
-4. Create a Procfile with the text: web: gunicorn elginis_restuarant.wsgi:application for example
+4. Create a Procfile with the text: web: gunicorn curdine.wsgi for example
+<details><summary>Images</summary>
+<img src="readme/procfile.png">
+</details>
 
 5. In the settings.py ensure the connection is to the Heroku postgres database
+<details><summary>Images</summary>
+<img src="readme/heroku_settings.png">
+</details>
 
 6. Ensure debug is set to false in the settings.py file
+<details><summary>Images</summary>
+<img src="readme/heroku_settings.png">
+</details>
 
-7. Add localhost/127.0.0.1, and elginisrestaurant.herokuapp.com to the ALLOWED_HOSTS variable in settings.py
+7. Add localhost, and curdine.herokuapp.com to the ALLOWED_HOSTS variable in settings.py
+<details><summary>Images</summary>
+<img src="readme/heroku_settings.png">
+</details>
 
 8. Run "python3 manage.py showmigrations" to check the status of the migrations
+<details><summary>Images</summary>
+<img src="readme/showmigrations.png">
+</details>
 
 9. Run "python3 manage.py migrate" to migrate the database
+<details><summary>Images</summary>
+<img src="readme/migrate.png">
+</details>
 
 10. Run "python3 manage.py createsuperuser" to create a super/admin user
+<details><summary>Images</summary>
+<img src="readme/createsuperuser.png">
+</details>
 
-11. Install gunicorn and add it to the requirements.txt file using the command pip3 freeze > requirements.txt
+11. From the CLI login to Heroku using the command heroku git:remote -a curdine and follow instructions to fill in your account details.
+<details><summary>Images</summary>
+<img src="readme/heroku_login.png">
+</details>
 
-12. From the CLI login to Heroku using the command heroku git:remote -a ci-ms4-elginisrestaurant
+12. Disable collectstatic in Heroku before any code is pushed using the command heroku config:set DISABLE_COLLECTSTATIC=1 -a curdine
+<details><summary>Images</summary>
+<img src="readme/disable_static.png">
+</details>
 
-13. Disable collectstatic in Heroku before any code is pushed using the command heroku config:set DISABLE_COLLECTSTATIC=1 -a ci-ms4-elginisrestaurant
+13. Deploy the code from git in heroku environment
+<details><summary>Images</summary>
+<img src="readme/deploy_heroku.png">
+</details>
 
-14. Push the code to Heroku using the command git push heroku master
+14. Ensure the following environment variables are set in Heroku
+<details><summary>Images</summary>
+<img src="readme/heroku_vars.png">
+</details>
 
-15. Ensure the following environment variables are set in Heroku
-
-16. Heroku Env variables
-
-17. Connect the app to GitHub, and enable automatic deploys from main
+15. Connect the app to GitHub, and enable automatic deploys from main
 Heroku Postgres
+<details><summary>Images</summary>
+<img src="readme/deploy_heroku.png">
+</details>
 
-18. Click deploy to deploy your application to Heroku for the first time
+16. Click deploy to deploy your application to Heroku for the first time
+<details><summary>Images</summary>
+<img src="readme/deploy_heroku.png">
+</details>
 
-19. Click on the link provided to access the application
+17. Click on the link provided to access the application or open app in top right
+<details><summary>Images</summary>
+<img src="readme/open_app.png">
+</details>
 
-20. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
+18. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
+<details><summary>Images</summary>
+<img src="readme/heroku_logs.png">
+</details>
 
+<hr>
 
 ### Forking the GitHub Repository 
 
 By forking this GitHub repository you are making a copy of the original to view or make changes without affecting the original. You can do this by following these steps...
 
-1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS3_MitsurukiFMS).
+1. Log into your GitHub account and find the [repository](https://github.com/Colm1711/curdine).
+<details><summary>Images</summary>
+<img src="readme/github_repo.png">
+</details>
+
 2. Click 'Fork' (last button on the top right of the repository page).
-3. You will then have a copy of the repository in your own GitHub account. 
+<details><summary>Images</summary>
+<img src="readme/fork_repo.png">
+</details>
+
+3. You will then have a copy of the repository in your own GitHub account.
+
 
 ### Making a Local Clone
 
-1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS4_Elginis_Restaurant).
-2. Click on the 'Code' button (next to 'Add file'). 
+1. Log into your GitHub account and find the [repository](https://github.com/Colm1711/curdine).
+<details><summary>Images</summary>
+<img src="readme/github_repo.png">
+</details>
+
+2. Click on the 'Code' button (next to 'Add file').
+<details><summary>Images</summary>
+<img src="readme/clone_repo.png">
+</details>
+
 3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+<details><summary>Images</summary>
+<img src="readme/clone_repo.png">
+</details>
+
 4. Then open Git Bash.
+<details><summary>Images</summary>
+<img src="readme/gitbash.png">
+</details>
+
 5. Change the current working directory to where you want the cloned directory to be made.
+
 6. In your IDE's terminal type 'git clone' followed by the URL you copied.
-7. Press Enter. 
+<details><summary>Images</summary>
+<img src="readme/gitbash_clone.png">
+</details>
+
+7. Press Enter.
+
 8. Your local clone will now be made.
 
 ## Credits
