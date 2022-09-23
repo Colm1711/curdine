@@ -1,3 +1,10 @@
+# Curdine
+(Developer: Colm O'Sullivan)
+
+![Mockup of Elgini's Restaurant](readme/responsive.png)
+
+[View live site](https://curdine.herokuapp.com/)
+
 # Contents
 * [**Project Goals**](<#project-goals>)
     *  [User Goals](#user-goals)
@@ -64,7 +71,9 @@ The Primary goal of this website from the owners perspectice is as follows:
 ## User Experience (UX)
 
 -   ### Target Audience
-1. Users looking to retrieve order food online.
+1. Users looking to submit orders food online.
+2. Those looking to skip cooking.
+3. Poutine lovers looking for a fix.
 
 ## User stories
 
