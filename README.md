@@ -1,7 +1,7 @@
 # Curdine
 (Developer: Colm O'Sullivan)
 
-![Mockup of Elgini's Restaurant](readme/responsive.png)
+![Mockup of Colm's Restaurant](readme/responsive.png)
 
 [View live site](https://curdine.herokuapp.com/)
 
@@ -53,17 +53,18 @@
 
 The Primary goal of this website from the owners perspectice is as follows:
 
-* To view the takeaways menu
-* To see details of the food items such as price, pictures, descriptions and reviews
-* To be able to leave reviews
+* For users to be able view the takeaway's menu 
+* For suer to see details of the food items such as price, pictures, descriptions and reviews
+* To be able to leave reviews and change their minds & delete the view
 * Sign up to be a registered user
-* Change their details and delete their account
+* Change their profile details and delete their account
 * See what the businesses ethos is
 * See where the takeaway is located
 
 The Primary goal of this website from the owners perspectice is as follows:
 
-* To attract customers to the business by showing eaily navigate site that can take orders eaily
+* To attract customers to the business and to navigate site easily 
+* It can take orders easily from registered and non-registered users.
 * See food options and reviews that other users have left
 * Allow users to place orders
 
@@ -113,9 +114,15 @@ The Primary goal of this website from the owners perspectice is as follows:
     1. User can cancel order
     2. User modify my order
     3. User see order history
+    4. User receive emails on sign up, login and order.
+    5. User can sign in via social media login options
+    6. Validate address with eir code api
+    7. Staff frontend login with dashboard to manage orders to keep admin seperated from regualr staff, only Group with permissions implemented for staff in Admin dashboard.
 
 
 #### Overview
+
+[Article from Irish Times](https://www.irishtimes.com/life-and-style/food-and-drink/revealed-ireland-s-favourite-restaurant-and-takeaway-food-during-lockdown-1.4555943)
 
 Article from above is from 2021. The listed most popular takeaway by Irish people during lockdown was chippers and after chips the most ordered item was sauce. My brother is heading away soon to begin his adventure in Canada in honour of him and his help for this project it lead me to pay homage by picking the most popular dish there Poutine, which is a delicacy of chips, gravy and cheese curds. This site is target at offering user the capability of ordering poutine online from Curdine takeaway service.
 
@@ -163,7 +170,7 @@ This model contains all fields stored in the database collections with their dat
 - The model contains the following fields: food_name, food_image, description, price, slug
 
 ##### Review Model
-- The Review model is the review model for food items for user to leave a review on a food item to let restraunt and others know thoughts on food item.
+- The Review model is the model for users to leave a review on a food item to let restraunt and others know their thoughts on food item(s).
 - It contains Food_item as a foreign-key.
 - When user submits review it is sent to the back end for the admin to approve before being displayed to the site.
 - The model contains the following fields: Food_item, name, email, body, creation_date, approved.
@@ -287,6 +294,8 @@ The overall design of the website was to keep the site as clean and simple as po
 The site is straightforward to navigate, with a high contrasting navigation bar to enable ease of use for the user to find other main pages.
 
 The background is neutral but bright, the images are not the focal point of the home page so the user has an immediate feeling to search for the of the menu to see the food.
+
+Images choosen with done so with objective of enticing the user and naming scheme's for food items with designed to be playful and trigger the user to want to know more.
 
 ### Colours
 
